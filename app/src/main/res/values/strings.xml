@@ -2,7 +2,7 @@
     <string name="app_name">FitnessReference</string>
     <string name="push">PUSH</string>
     <string name="email">Email</string>
-    <color name="backs">#82796E</color>
-    <color name="botons">#FF4E4A49</color>
-
+    <string name="passwordLogin">Password</string>
+    <string name="e_mailLogin">E-mail</string>
+    <string name="btnLogIn">LOG IN</string>
 </resources>
