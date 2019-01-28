@@ -5,4 +5,9 @@
     <string name="passwordLogin">Password</string>
     <string name="e_mailLogin">E-mail</string>
     <string name="btnLogIn">LOG IN</string>
+    <string name="horario">Horario</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="estad_sticas">Estadísticas</string>
+    <string name="reiniciar_progreso">Reiniciar Progreso</string>
+    <string name="gonzalo_garc_a">Gonzalo García</string>
 </resources>
