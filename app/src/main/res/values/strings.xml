@@ -12,4 +12,7 @@
     <string name="gonzalo_garc_a">Gonzalo García</string>
     <string name="navigation_drawer_open">Abrir navegación</string>
     <string name="navigation_drawer_close">Cerrar navegación</string>
+    <string name="calendar">calendar</string>
+    <string name="menu_temporal_de_gonzalo">Menu Temporal de gonzalo</string>
+    <string name="recicler">recicler</string>
 </resources>

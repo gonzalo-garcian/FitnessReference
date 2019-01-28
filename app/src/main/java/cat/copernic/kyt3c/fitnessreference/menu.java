@@ -30,8 +30,7 @@ public class menu extends AppCompatActivity {
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        btnRecicler = findViewById(R.id.btnRecicler);
-        btnCalendar = findViewById(R.id.btnCalendar);
+
     }
 
     @Override

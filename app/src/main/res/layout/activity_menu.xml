@@ -7,7 +7,7 @@
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
     tools:context=".menu"
-    tools:openDrawer="start">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/colorPrimary"
             android:id="@+id/toolbar"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -25,8 +25,8 @@
 
         <FrameLayout
             android:id="@+id/fragment_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_width="281dp"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
@@ -40,43 +40,4 @@
 
     </android.support.design.widget.NavigationView>
 
-    <Button
-        android:id="@+id/btnRecicler"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="274dp"
-        android:layout_marginEnd="162dp"
-        android:onClick="recicler"
-        android:text="recicler"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnCalendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="253dp"
-        android:onClick="calendar"
-        android:text="calendar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRecicler" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="39dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="119dp"
-        android:text="Menu Temporal de gonzalo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </android.support.v4.widget.DrawerLayout>

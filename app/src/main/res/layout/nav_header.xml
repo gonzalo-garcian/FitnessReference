@@ -6,7 +6,8 @@
     android:gravity="bottom"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:layout_height="176dp">
+    android:layout_height="176dp"
+    >
     
     <ImageView
         android:layout_width="wrap_content"
@@ -17,10 +18,12 @@
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         android:text="@string/gonzalo_garc_a"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="gonzalo.garcia@copernic.cat"/>
+        android:text="gonzalo.garcia@copernic.cat"
+        android:textColor="@color/colorAccent"/>
 </LinearLayout>
