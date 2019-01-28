@@ -10,4 +10,6 @@
     <string name="estad_sticas">Estadísticas</string>
     <string name="reiniciar_progreso">Reiniciar Progreso</string>
     <string name="gonzalo_garc_a">Gonzalo García</string>
+    <string name="navigation_drawer_open">Abrir navegación</string>
+    <string name="navigation_drawer_close">Cerrar navegación</string>
 </resources>
