@@ -15,4 +15,6 @@
     <string name="calendar">calendar</string>
     <string name="menu_temporal_de_gonzalo">Menu Temporal de gonzalo</string>
     <string name="recicler">recicler</string>
+    <string name="correo">gonzalo.garcia@copernic.cat</string>
+    <string name="home">Home</string>
 </resources>

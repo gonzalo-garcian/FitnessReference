@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -42,11 +43,14 @@ public class menu extends AppCompatActivity {
         }
     }
 
-    public void recicler(View view) {
+
+
+    public void recicler(MenuItem item) {
         Intent recicler = new Intent(menu.this, recicler.class);
         startActivity(recicler);
     }
-    public void calendar(View view) {
+
+    public void calendar(MenuItem item) {
         Intent calendar = new Intent(menu.this, calendar.class);
         startActivity(calendar);
     }
