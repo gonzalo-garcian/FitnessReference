@@ -52,9 +52,9 @@ public class recicler extends AppCompatActivity implements MyRecyclerViewAdapter
         adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
     }
-
+    // el texto del toaster que sale al clickar
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(this, "Has clickado en " + adapter.getItem(position) + " que es la fila " + position, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Este ejericio es" + adapter.getItem(position) + " y debes repetirlo " + position + " veces.", Toast.LENGTH_SHORT).show();
     }
 }
