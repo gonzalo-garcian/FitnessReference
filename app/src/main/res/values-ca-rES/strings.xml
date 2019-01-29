@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FitnessReference</string>
+    <string name="push">Push</string>
+    <string name="email">Correu</string>
+    <string name="passwordLogin">contrasenya</string>
+    <string name="e_mailLogin">E-mail</string>
+    <string name="btnLogIn">Log in</string>
+    <string name="horario">Horari</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="estad_sticas">estadística</string>
+    <string name="reiniciar_progreso">reiniciar process</string>
+    <string name="gonzalo_garc_a">Usuari</string>
+    <string name="navigation_drawer_open">Obrir navegacio</string>
+    <string name="navigation_drawer_close">Tancar navegacio</string>
+    <string name="calendar">Calendari</string>
+    <string name="menu_temporal_de_gonzalo">"menu "</string>
+    <string name="recicler">RecyclerView</string>
+    <string name="btnFuncion">boto</string>
+</resources>
