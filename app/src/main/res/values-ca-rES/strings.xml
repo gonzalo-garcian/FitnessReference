@@ -17,4 +17,6 @@
     <string name="menu_temporal_de_gonzalo">"menu "</string>
     <string name="recicler">RecyclerView</string>
     <string name="btnFuncion">bo</string>
+    <string name="correo">gonzalo.garcia@copernic.cat</string>
+    <string name="home">Home</string>
 </resources>
