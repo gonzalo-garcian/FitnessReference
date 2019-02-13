@@ -7,7 +7,7 @@
             android:id="@+id/ic_home"
             android:icon="@drawable/ic_home_rv"
             android:title="@string/home"
-            android:onClick="recicler"/>
+            />
 
         <item
             android:id="@+id/ic_horario"
