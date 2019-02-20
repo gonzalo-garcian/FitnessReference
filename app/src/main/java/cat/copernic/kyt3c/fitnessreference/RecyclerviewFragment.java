@@ -1,25 +1,31 @@
 package cat.copernic.kyt3c.fitnessreference;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class recicler extends AppCompatActivity implements MyRecyclerViewAdapter.ItemClickListener {
+public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdapter.ItemClickListener{
 
     MyRecyclerViewAdapter adapter;
+    ArrayList<String> actividades;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recicler);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        // datos que meter en el recicler
-        ArrayList<String> actividades = new ArrayList<>();
+        View vista = inflater.inflate(R.layout.activity_recicler,container,false);
+
+        actividades = new ArrayList<>();
+
         actividades.add("Actividad 1: Saltos");
         actividades.add("Actividad 2: Sprints");
         actividades.add("Actividad 3: Saltos");
@@ -45,16 +51,16 @@ public class recicler extends AppCompatActivity implements MyRecyclerViewAdapter
         actividades.add("Actividad 11: Saltos");
         actividades.add("Actividad 12: Sprints");
 
-        //rellenar y  meter el recicler
-        RecyclerView recyclerView = findViewById(R.id.activi);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new MyRecyclerViewAdapter(this, actividades);
+        RecyclerView recyclerView = vista.findViewById(R.id.activi);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        adapter = new MyRecyclerViewAdapter(getContext(), actividades);
         adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
+
+        return vista;
     }
-    // el texto del toaster que sale al clickar
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(this, "Este ejericio es" + adapter.getItem(position) + " y debes repetirlo " + position + " veces.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Este ejericio es" + adapter.getItem(position) + " y debes repetirlo " + position + " veces.", Toast.LENGTH_SHORT).show();
     }
 }

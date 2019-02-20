@@ -41,7 +41,7 @@ public class menu extends AppCompatActivity implements NavigationView.OnNavigati
         switch (menuItem.getItemId()){
             case R.id.ic_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new MessageFragment()).commit();
+                        new RecyclerviewFragment()).commit();
                 break;
         }
 
@@ -56,13 +56,6 @@ public class menu extends AppCompatActivity implements NavigationView.OnNavigati
         }else{
             super.onBackPressed();
         }
-    }
-
-
-
-    public void recicler(MenuItem item) {
-        Intent recicler = new Intent(menu.this, recicler.class);
-        startActivity(recicler);
     }
 
     public void calendar(MenuItem item) {
