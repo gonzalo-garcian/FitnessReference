@@ -19,4 +19,6 @@
     <string name="correo">gonzalo.garcia@copernic.cat</string>
     <string name="home">Home</string>
     <string name="title_activity_maps">Map</string>
+    <string name="escribe_la_web_aqui">Escribe la web aqui</string>
+    <string name="web_aqui">https://www.fitnessreference.cat</string>
 </resources>
