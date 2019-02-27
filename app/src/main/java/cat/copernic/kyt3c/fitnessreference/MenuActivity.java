@@ -10,10 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-public class menu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
 
@@ -62,7 +60,7 @@ public class menu extends AppCompatActivity implements NavigationView.OnNavigati
     }
 
     public void calendar(MenuItem item) {
-        Intent calendar = new Intent(menu.this, calendar.class);
+        Intent calendar = new Intent(MenuActivity.this, calendar.class);
         startActivity(calendar);
     }
 }
