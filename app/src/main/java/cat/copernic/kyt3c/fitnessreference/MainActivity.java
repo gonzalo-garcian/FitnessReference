@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void menu(View view) {
-        Intent menu = new Intent(MainActivity.this, menu.class);
+        Intent menu = new Intent(MainActivity.this, webitext.class);
         startActivity(menu);
     }
 
