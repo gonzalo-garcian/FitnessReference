@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.RotateAnimation;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -27,7 +28,7 @@ public class MainActivity extends BaseActivity implements
 
     private EditText mEmailField;
     private EditText mPasswordField;
-    ImageView animacio;
+    ImageView imageView;
 
     // [START declare_auth]
     public FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -47,25 +48,18 @@ public class MainActivity extends BaseActivity implements
         findViewById(R.id.btnLogin).setOnClickListener(this);
         findViewById(R.id.btnSignUp).setOnClickListener(this);
 
+        imageView = (ImageView) findViewById(R.id.imageView);
+        rotarImagen(imageView);
     }
+    private void rotarImagen(View view){
+        RotateAnimation animation = new RotateAnimation(0, 360,
+                RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+                RotateAnimation.RELATIVE_TO_SELF, 0.5f);
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        View v = inflater.inflate(R.layout.activity_main, container, false);
-
-        animacio = (ImageView) v.findViewById(R.id.imageView);
-
-        animacio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Carrega l'animació de la carpeta /res/anim
-                Animation anim = AnimationUtils.loadAnimation(v.getContext(), R.anim.animaciotween);
-
-                //Inicia l'animació cada cop que fem click.
-                animacio.startAnimation(anim);
-            }
-        });
-        return v;
+        animation.setDuration(2000);
+        animation.setRepeatCount(Animation.INFINITE);
+        animation.setRepeatMode(Animation.REVERSE);
+        view.startAnimation(animation);
     }
 
     // [START on_start_check_user]
