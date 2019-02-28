@@ -5,8 +5,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +27,7 @@ public class MainActivity extends BaseActivity implements
 
     private EditText mEmailField;
     private EditText mPasswordField;
+    ImageView animacio;
 
     // [START declare_auth]
     public FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -40,6 +46,26 @@ public class MainActivity extends BaseActivity implements
         // Buttons
         findViewById(R.id.btnLogin).setOnClickListener(this);
         findViewById(R.id.btnSignUp).setOnClickListener(this);
+
+    }
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        View v = inflater.inflate(R.layout.activity_main, container, false);
+
+        animacio = (ImageView) v.findViewById(R.id.imageView);
+
+        animacio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Carrega l'animació de la carpeta /res/anim
+                Animation anim = AnimationUtils.loadAnimation(v.getContext(), R.anim.animaciotween);
+
+                //Inicia l'animació cada cop que fem click.
+                animacio.startAnimation(anim);
+            }
+        });
+        return v;
     }
 
     // [START on_start_check_user]
@@ -156,4 +182,5 @@ public class MainActivity extends BaseActivity implements
             createAccount(mEmailField.getText().toString(), mPasswordField.getText().toString());
         }
     }
+
 }
