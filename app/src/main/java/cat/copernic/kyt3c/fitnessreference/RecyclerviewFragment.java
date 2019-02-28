@@ -1,5 +1,6 @@
 package cat.copernic.kyt3c.fitnessreference;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdapter.ItemClickListener{
@@ -28,28 +28,9 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
 
         actividades.add("Actividad 1: Saltos");
         actividades.add("Actividad 2: Sprints");
-        actividades.add("Actividad 3: Saltos");
-        actividades.add("Actividad 4: Sprints");
-        actividades.add("Actividad 5: Saltos");
-        actividades.add("Actividad 6: Sprints");
-        actividades.add("Actividad 7: Saltos");
-        actividades.add("Actividad 8: Sprints");
-        actividades.add("Actividad 9: Saltos");
-        actividades.add("Actividad 10: Sprints");
-        actividades.add("Actividad 11: Saltos");
-        actividades.add("Actividad 12: Sprints");
-        actividades.add("Actividad 1: Saltos");
-        actividades.add("Actividad 2: Sprints");
-        actividades.add("Actividad 3: Saltos");
-        actividades.add("Actividad 4: Sprints");
-        actividades.add("Actividad 5: Saltos");
-        actividades.add("Actividad 6: Sprints");
-        actividades.add("Actividad 7: Saltos");
-        actividades.add("Actividad 8: Sprints");
-        actividades.add("Actividad 9: Saltos");
-        actividades.add("Actividad 10: Sprints");
-        actividades.add("Actividad 11: Saltos");
-        actividades.add("Actividad 12: Sprints");
+        actividades.add("Actividad 3: Piscina");
+        actividades.add("Actividad 4: Pesas");
+        actividades.add("Actividad 5: Bicicleta");
 
         RecyclerView recyclerView = vista.findViewById(R.id.activi);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -61,6 +42,26 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
     }
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(getContext(), "Este ejericio es" + adapter.getItem(position) + " y debes repetirlo " + position + " veces.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Este ejericio es " + adapter.getItem(position) + " quieres compartirlo con tus amigos? Mandales un mensaje.", Toast.LENGTH_SHORT).show();
+        if(position==0){ // saltos
+            Intent intent = new Intent(getActivity(), actividadsaltos.class);
+            startActivity(intent);
+        }
+        if(position==1){// sprints
+            Intent intent = new Intent(getActivity(), actividadsprints.class);
+            startActivity(intent);
+        }
+        if(position==2){// piscina
+            Intent intent = new Intent(getActivity(), webitext.class);
+            startActivity(intent);
+        }
+        if(position==3){// pesas
+            Intent intent = new Intent(getActivity(), webitext.class);
+            startActivity(intent);
+        }
+        if(position==4){// bicicleta
+            Intent intent = new Intent(getActivity(), webitext.class);
+            startActivity(intent);
+        }
     }
 }
