@@ -17,12 +17,13 @@
     <string name="recicler">recicler</string>
     <string name="btnFuncion">bo</string>
     <string name="correo">gonzalo.garcia@copernic.cat</string>
-    <string name="home">Home</string>
+    <string name="planDeEntrenamiento">Plan De Entrenamiento</string>
     <string name="title_activity_maps">Map</string>
     <string name="escribe_la_web_aqui">Escribe la web aqui</string>
     <string name="web_aqui">https://www.fitnessreference.cat</string>
     <string name="auth_failed">auth fallo</string>
     <string name="loading">Autentificando credenciales</string>
     <string name="comparte">Comparte</string>
-    <string name="signup">SIGNUP</string>
+    <string name="signup">Registro</string>
+    <string name="estiramientos">Estiramientos</string>
 </resources>
