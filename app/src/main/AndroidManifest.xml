@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".actividadsaltos"></activity>
+        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".actividadsaltos" />
         <activity android:name=".actividadsprints" />
         <activity android:name=".webitext" />
         <!--
@@ -41,7 +42,7 @@
             android:name=".MenuActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LogInActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

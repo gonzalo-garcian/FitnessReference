@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "378564936778",
+    "firebase_url": "https://fitnessreference-e2fe8.firebaseio.com",
+    "project_id": "fitnessreference-e2fe8",
+    "storage_bucket": "fitnessreference-e2fe8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378564936778:android:7a2bb74330b8c529",
+        "android_client_info": {
+          "package_name": "cat.copernic.kyt3c.fitnessreference"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "378564936778-e63k8utfmoff3lskf5csmu623ip26473.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cat.copernic.kyt3c.fitnessreference",
+            "certificate_hash": "7ed29e9660d816e908c75c0033e2a1279517dbd7"
+          }
+        },
+        {
+          "client_id": "378564936778-jjjunae25omdpuvu01o1ug0ou60kokb7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU8nRCyclxXNdygyCMig9r1FMtURC9Vfg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "378564936778-jjjunae25omdpuvu01o1ug0ou60kokb7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
