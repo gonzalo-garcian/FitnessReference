@@ -26,11 +26,11 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
 
         actividades = new ArrayList<>();
 
-        actividades.add("Actividad 1: Saltos");
-        actividades.add("Actividad 2: Sprints");
-        actividades.add("Actividad 3: Piscina");
-        actividades.add("Actividad 4: Pesas");
-        actividades.add("Actividad 5: Bicicleta");
+        actividades.add("DIA 1");
+        actividades.add("DIA 2");
+        actividades.add("DIA 3");
+        actividades.add("DIA 4");
+        actividades.add("DIA 5");
 
         RecyclerView recyclerView = vista.findViewById(R.id.activi);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -42,7 +42,7 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
     }
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(getContext(), "Este ejericio es " + adapter.getItem(position) + " quieres compartirlo con tus amigos? Mandales un mensaje.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Este ejericio del " + adapter.getItem(position) + " quieres compartirlo con tus amigos? Mandales un mensaje.", Toast.LENGTH_SHORT).show();
         if(position==0){ // saltos
             Intent intent = new Intent(getActivity(), actividadsaltos.class);
             startActivity(intent);

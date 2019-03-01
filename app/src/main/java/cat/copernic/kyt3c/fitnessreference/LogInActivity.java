@@ -5,8 +5,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.RotateAnimation;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +28,7 @@ public class LogInActivity extends BaseActivity implements
 
     private EditText mEmailField;
     private EditText mPasswordField;
+    ImageView imageView;
 
     // [START declare_auth]
     public FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -40,6 +47,19 @@ public class LogInActivity extends BaseActivity implements
         // Buttons
         findViewById(R.id.btnLogin).setOnClickListener(this);
         findViewById(R.id.btnSignUp).setOnClickListener(this);
+
+        imageView = (ImageView) findViewById(R.id.imageView);
+        rotarImagen(imageView);
+    }
+    private void rotarImagen(View view){
+        RotateAnimation animation = new RotateAnimation(0, 360,
+                RotateAnimation.RELATIVE_TO_SELF, 0.5f,
+                RotateAnimation.RELATIVE_TO_SELF, 0.5f);
+
+        animation.setDuration(2000);
+        animation.setRepeatCount(Animation.INFINITE);
+        animation.setRepeatMode(Animation.REVERSE);
+        view.startAnimation(animation);
     }
 
     // [START on_start_check_user]
@@ -125,4 +145,5 @@ public class LogInActivity extends BaseActivity implements
         }
         */
     }
+
 }
