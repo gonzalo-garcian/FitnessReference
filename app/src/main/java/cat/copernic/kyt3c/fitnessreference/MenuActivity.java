@@ -44,6 +44,10 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new RecyclerviewFragment()).commit();
                 break;
+            case R.id.ic_horario:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new CalendarFragment()).commit();
+
         }
 
         drawer.closeDrawer(GravityCompat.START);
@@ -59,8 +63,4 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    public void calendar(MenuItem item) {
-        Intent calendar = new Intent(MenuActivity.this, calendar.class);
-        startActivity(calendar);
-    }
 }

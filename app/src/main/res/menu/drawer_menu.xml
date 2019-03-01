@@ -12,8 +12,7 @@
         <item
             android:id="@+id/ic_horario"
             android:icon="@drawable/ic_horario"
-            android:title="@string/horario"
-            android:onClick="calendar"/>
+            android:title="@string/horario"/>
 
         <item
             android:id="@+id/ic_estadisticas"

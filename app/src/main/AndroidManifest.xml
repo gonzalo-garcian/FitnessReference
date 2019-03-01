@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".SignUpActivity"/>
         <activity android:name=".actividadsaltos" />
         <activity android:name=".actividadsprints" />
         <activity android:name=".webitext" />
@@ -37,7 +37,6 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".calendar" />
         <activity
             android:name=".MenuActivity"
             android:theme="@style/AppTheme.NoActionBar" />
