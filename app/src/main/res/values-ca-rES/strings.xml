@@ -27,4 +27,8 @@
     <string name="comparte">Comparte</string>
     <string name="signup">Registre</string>
     <string name="estiramientos">Estiraments</string>
+    <string name="normal_map">mapa normal</string>
+    <string name="satellite_map">mapa satelite</string>
+    <string name="terrain_map">mapa tierra</string>
+    <string name="hybrid_map">mapa hibrido</string>
 </resources>
