@@ -52,8 +52,8 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.ic_estirar:
-                Intent intent = new Intent(MenuActivity.this, EstiramientosFragment.class);
-                startActivity(intent);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new EstiramientosFragment()).commit();
 
         }
 
