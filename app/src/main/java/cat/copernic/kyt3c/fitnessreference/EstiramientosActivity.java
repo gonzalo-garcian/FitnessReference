@@ -25,8 +25,8 @@ public class EstiramientosActivity extends AppCompatActivity {
         videoView=findViewById(R.id.estiramientosVView);
         listView=findViewById(R.id.EstiramientosList);
         videoList=new ArrayList<>();
-        videoList.add("Antes");
-        videoList.add("Despues");
+        videoList.add("antes");
+        videoList.add("despues");
 
         adapter= new ArrayAdapter(this,android.R.layout.simple_list_item_1,videoList);
         listView.setAdapter(adapter);
