@@ -30,8 +30,7 @@ import com.google.android.gms.maps.model.PointOfInterest;
 
 import java.util.Locale;
 
-public class MapsActivity extends AppCompatActivity implements
-        OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private static final String TAG = MapsActivity.class.getSimpleName();
 
@@ -95,7 +94,7 @@ public class MapsActivity extends AppCompatActivity implements
 
         // Add a ground overlay 100 meters in width to the home location.
         GroundOverlayOptions homeOverlay = new GroundOverlayOptions()
-                .image(BitmapDescriptorFactory.fromResource(R.drawable.android))
+                .image(BitmapDescriptorFactory.fromResource(R.drawable.ic_settings))
                 .position(home, 100);
 
         mMap.addGroundOverlay(homeOverlay);
