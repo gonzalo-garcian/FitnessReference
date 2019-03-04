@@ -44,9 +44,15 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new RecyclerviewFragment()).commit();
                 break;
+
+
             case R.id.ic_horario:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CalendarFragment()).commit();
+                break;
+
+            case R.id.ic_estirar:
+                start
 
         }
 
