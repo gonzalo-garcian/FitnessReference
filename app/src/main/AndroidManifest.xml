@@ -21,7 +21,7 @@
         <activity android:name=".SignUpActivity"/>
         <activity android:name=".SaltosActivity" />
         <activity android:name=".SprintsActivity" />
-        <activity android:name=".EstiramientosActivity"/>
+        <activity android:name=".EstiramientosFragment"/>
         <activity android:name=".WebImplicitIntentActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

@@ -52,7 +52,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.ic_estirar:
-                Intent intent = new Intent(MenuActivity.this, EstiramientosActivity.class);
+                Intent intent = new Intent(MenuActivity.this, EstiramientosFragment.class);
                 startActivity(intent);
 
         }
