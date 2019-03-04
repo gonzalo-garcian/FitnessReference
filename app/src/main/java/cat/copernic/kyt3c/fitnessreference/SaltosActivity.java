@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class actividadsprints extends AppCompatActivity {
+public class SaltosActivity extends AppCompatActivity {
     private EditText txtcom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actividadsprints);
+        setContentView(R.layout.activity_actividadsaltos);
         txtcom = findViewById(R.id.txtcom);
 
     }

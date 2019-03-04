@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
-public class webitext extends AppCompatActivity {
+public class WebImplicitIntentActivity extends AppCompatActivity {
     private EditText txtweb;
     private EditText txtcom;
     @Override

@@ -19,10 +19,10 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".SignUpActivity"/>
-        <activity android:name=".actividadsaltos" />
-        <activity android:name=".actividadsprints" />
+        <activity android:name=".SaltosActivity" />
+        <activity android:name=".SprintsActivity" />
         <activity android:name=".EstiramientosActivity"/>
-        <activity android:name=".webitext" />
+        <activity android:name=".WebImplicitIntentActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

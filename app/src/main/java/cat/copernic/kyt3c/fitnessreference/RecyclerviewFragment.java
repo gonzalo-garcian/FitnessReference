@@ -44,23 +44,23 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
     public void onItemClick(View view, int position) {
         Toast.makeText(getContext(), "Este ejericio del " + adapter.getItem(position) + " quieres compartirlo con tus amigos? Mandales un mensaje.", Toast.LENGTH_SHORT).show();
         if(position==0){ // saltos
-            Intent intent = new Intent(getActivity(), actividadsaltos.class);
+            Intent intent = new Intent(getActivity(), SaltosActivity.class);
             startActivity(intent);
         }
         if(position==1){// sprints
-            Intent intent = new Intent(getActivity(), actividadsprints.class);
+            Intent intent = new Intent(getActivity(), SprintsActivity.class);
             startActivity(intent);
         }
         if(position==2){// piscina
-            Intent intent = new Intent(getActivity(), webitext.class);
+            Intent intent = new Intent(getActivity(), WebImplicitIntentActivity.class);
             startActivity(intent);
         }
         if(position==3){// pesas
-            Intent intent = new Intent(getActivity(), webitext.class);
+            Intent intent = new Intent(getActivity(), WebImplicitIntentActivity.class);
             startActivity(intent);
         }
         if(position==4){// bicicleta
-            Intent intent = new Intent(getActivity(), webitext.class);
+            Intent intent = new Intent(getActivity(), WebImplicitIntentActivity.class);
             startActivity(intent);
         }
     }
