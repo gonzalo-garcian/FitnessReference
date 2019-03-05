@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="cat.copernic.kyt3c.fitnessreference">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -18,11 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".SaltosActivity" />
-        <activity android:name=".SprintsActivity" />
-        <activity android:name=".EstiramientosFragment"/>
-        <activity android:name=".WebImplicitIntentActivity" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -36,8 +33,13 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:name=".maps"
+            android:label="@string/title_activity_maps"></activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SaltosActivity" />
+        <activity android:name=".SprintsActivity" />
+
+        <activity android:name=".WebImplicitIntentActivity" />
         <activity
             android:name=".MenuActivity"
             android:theme="@style/AppTheme.NoActionBar" />
