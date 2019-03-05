@@ -27,7 +27,7 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
 
         actividades = new ArrayList<>();
 
-        actividades.add("DIA 1");
+        actividades.add("                     DIA 1");
         actividades.add("DIA 2");
         actividades.add("DIA 3");
         actividades.add("DIA 4");

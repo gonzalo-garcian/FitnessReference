@@ -140,10 +140,13 @@ public class LogInActivity extends BaseActivity implements
         if (i == R.id.btnLogin) {
             signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());
 
-        } /*else if (i == R.id.btnSignUp) {
-            createAccount(mEmailField.getText().toString(), mPasswordField.getText().toString());
+        } else if (i == R.id.btnSignUp) {
+            //createAccount(mEmailField.getText().toString(), mPasswordField.getText().toString());
+            Intent intent = new Intent(LogInActivity.this, MapsActivity.class);
+            startActivity(intent);
+
         }
-        */
+
     }
 
 }
