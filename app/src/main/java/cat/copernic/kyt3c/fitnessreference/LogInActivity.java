@@ -142,8 +142,6 @@ public class LogInActivity extends BaseActivity implements
 
         } else if (i == R.id.btnSignUp) {
             //createAccount(mEmailField.getText().toString(), mPasswordField.getText().toString());
-            Intent intent = new Intent(LogInActivity.this, maps.class);
-            startActivity(intent);
 
         }
 

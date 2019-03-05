@@ -44,5 +44,10 @@ public class WebImplicitIntentActivity extends AppCompatActivity {
                 .startChooser();
     }
 
+    public void openMap(View view){
+        Intent intent = new Intent(WebImplicitIntentActivity.this, maps.class);
+        startActivity(intent);
+    }
+
 
 }
