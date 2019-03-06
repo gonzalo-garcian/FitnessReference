@@ -12,11 +12,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class TabCompartir extends Fragment {
     private EditText txtweb;
     private EditText txtcom;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -26,9 +28,10 @@ public class TabCompartir extends Fragment {
         txtcom = vista.findViewById(R.id.txtCompartir);
 
 
+
+
         return vista;
     }
-
 
 
     public void openWebsite(View view) {
