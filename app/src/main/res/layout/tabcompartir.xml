@@ -7,10 +7,73 @@
     android:layout_height="match_parent"
     tools:context=".DiaActivity">
 
-    <TextView
-        android:id="@+id/section_label"
+    <EditText
+        android:id="@+id/txtweb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Compartir" />
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="99dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:labelFor="@string/web_aqui"
+        android:text="@string/web_aqui"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" tools:targetApi="o" />
 
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="162dp"
+        android:onClick="openWebsite"
+        android:text="Navegar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtweb" />
+
+    <EditText
+        android:id="@+id/txtcom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="99dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="167dp"
+        android:onClick="shareText"
+        android:text="Comparte"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcom" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="162dp"
+        android:onClick="openMap"
+        android:text="Mapa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
 </RelativeLayout>
