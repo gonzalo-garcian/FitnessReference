@@ -1,9 +1,15 @@
 package cat.copernic.kyt3c.fitnessreference;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -12,15 +18,19 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class DiaActivity extends AppCompatActivity {
+    private EditText txtweb;
+    private EditText txtcom;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -57,14 +67,8 @@ public class DiaActivity extends AppCompatActivity {
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        txtcom = findViewById(R.id.txtCompartir);
+        txtweb = findViewById(R.id.txtWeb);
 
     }
 
@@ -136,4 +140,42 @@ public class DiaActivity extends AppCompatActivity {
             return null;
         }
     }
+    public void openMap(View view){
+        if (ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]
+                            {Manifest.permission.ACCESS_FINE_LOCATION},
+                    3);
+        } else {
+
+        }
+        Intent intent = new Intent(DiaActivity.this, maps.class);
+        startActivity(intent);
+    }
+
+    public void shareText(View view) {
+        String txt = "Enviado desde FitnessReference: "+txtcom.getText().toString();
+        String mimeType = "text/plain";
+        ShareCompat.IntentBuilder
+                .from(this)
+                .setType(mimeType)
+                .setChooserTitle("Compartir con")
+                .setText(txt)
+                .startChooser();
+    }
+
+    public void openWebsite(View view) {
+        String url = txtweb.getText().toString();
+
+        Uri webpage = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d("ImplicitIntents", "No funciona el link");
+        }
+    }
+
 }
