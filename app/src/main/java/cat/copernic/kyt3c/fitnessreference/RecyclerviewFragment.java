@@ -27,11 +27,13 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
 
         actividades = new ArrayList<>();
 
-        actividades.add("                     DIA 1");
-        actividades.add("DIA 2");
-        actividades.add("DIA 3");
-        actividades.add("DIA 4");
-        actividades.add("DIA 5");
+        actividades.add("           DIA 1  -- Lunes             ");
+        actividades.add("           DIA 2  -- Martes            ");
+        actividades.add("           DIA 3  -- Miercoles            ");
+        actividades.add("           DIA 4  -- Jueves            ");
+        actividades.add("           DIA 5  -- Viernes            ");
+        actividades.add("           DIA 6  -- Sabado            ");
+        actividades.add("           DIA 7  -- Domingo            ");
 
         RecyclerView recyclerView = vista.findViewById(R.id.activi);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -47,7 +49,7 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
     @Override
     public void onItemClick(View view, int position) {
         Toast.makeText(getContext(), "Este ejericio del " + adapter.getItem(position) + " quieres compartirlo con tus amigos? Mandales un mensaje.", Toast.LENGTH_SHORT).show();
-        if(position==0){ // saltos
+        /*if(position==0){ // saltos
             Intent intent = new Intent(getActivity(), SaltosActivity.class);
             startActivity(intent);
         }
@@ -66,6 +68,8 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
         if(position==4){// bicicleta
             Intent intent = new Intent(getActivity(), WebImplicitIntentActivity.class);
             startActivity(intent);
-        }
+        }*/
+        Intent intent = new Intent(getActivity(), WebImplicitIntentActivity.class);
+        startActivity(intent);
     }
 }
