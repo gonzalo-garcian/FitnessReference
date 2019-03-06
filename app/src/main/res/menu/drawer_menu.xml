@@ -5,12 +5,12 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/ic_home"
-            android:icon="@drawable/ic_home_rv"
+            android:icon="@drawable/ic_entrenamiento"
             android:title="@string/planDeEntrenamiento"
             />
         <item
             android:id="@+id/ic_estirar"
-            android:icon="@drawable/ic_home_rv"
+            android:icon="@drawable/ic_estiramiento"
             android:title="@string/estiramientos"
             />
 
@@ -20,9 +20,9 @@
             android:title="@string/horario"/>
 
         <item
-            android:id="@+id/ic_estadisticas"
-            android:icon="@drawable/ic_stats"
-            android:title="@string/estad_sticas" />
+            android:id="@+id/ic_geolocalizacion"
+            android:icon="@drawable/ic_geolocalizacion"
+            android:title="@string/geolocalizacion" />
 
         <item
             android:id="@+id/ic_ajustes"
