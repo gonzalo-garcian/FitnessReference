@@ -22,8 +22,8 @@ public class TabCompartir extends Fragment {
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.tabcompartir, container, false);
 
-        txtweb = vista.findViewById(R.id.txtweb);
-        txtcom = vista.findViewById(R.id.txtcom);
+        txtweb = vista.findViewById(R.id.txtWeb);
+        txtcom = vista.findViewById(R.id.txtCompartir);
 
 
         return vista;

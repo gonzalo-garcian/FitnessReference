@@ -7,7 +7,7 @@
     tools:context=".WebImplicitIntentActivity">
 
     <EditText
-        android:id="@+id/txtweb"
+        android:id="@+id/txtWeb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" tools:targetApi="o" />
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/btnNavegar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
@@ -33,10 +33,10 @@
         android:text="Navegar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtweb" />
+        app:layout_constraintTop_toBottomOf="@+id/txtWeb" />
 
     <EditText
-        android:id="@+id/txtcom"
+        android:id="@+id/txtCompartir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
@@ -46,7 +46,7 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnMapa" />
 
     <Button
         android:id="@+id/button2"
@@ -61,10 +61,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtcom" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCompartir" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnMapa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
@@ -74,5 +74,5 @@
         android:text="Mapa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNavegar" />
 </android.support.constraint.ConstraintLayout>

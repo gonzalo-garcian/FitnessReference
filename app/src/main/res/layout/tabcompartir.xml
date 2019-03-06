@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
@@ -8,72 +8,75 @@
     tools:context=".DiaActivity">
 
     <EditText
-        android:id="@+id/txtweb"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtWeb"
+        android:layout_width="214dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="107dp"
-        android:layout_marginEnd="99dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:labelFor="@string/web_aqui"
         android:text="@string/web_aqui"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" tools:targetApi="o" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/btnNavegar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="162dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
         android:onClick="openWebsite"
-        android:text="Navegar"
+        android:text="@string/btnNavegar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtweb" />
+        app:layout_constraintTop_toBottomOf="@+id/txtWeb" />
 
     <EditText
-        android:id="@+id/txtcom"
+        android:id="@+id/txtCompartir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="99dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnMapa" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnComparte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="167dp"
-        android:onClick="shareText"
-        android:text="Comparte"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:onClick=""
+        android:text="@string/btnComparte"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtcom" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCompartir" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnMapa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="162dp"
-        android:onClick="openMap"
-        android:text="Mapa"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:onClick=""
+        android:text="@string/btnMapa"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn1" />
-</RelativeLayout>
+        app:layout_constraintTop_toBottomOf="@+id/btnNavegar" />
+</android.support.constraint.ConstraintLayout>

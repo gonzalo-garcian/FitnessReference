@@ -12,7 +12,7 @@ public class SprintsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actividadsprints);
-        txtcom = findViewById(R.id.txtcom);
+        txtcom = findViewById(R.id.txtCompartir);
 
     }
     public void shareText(View view) {
