@@ -69,7 +69,7 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
             Intent intent = new Intent(getActivity(), WebImplicitIntentActivity.class);
             startActivity(intent);
         }*/
-        Intent intent = new Intent(getActivity(), WebImplicitIntentActivity.class);
+        Intent intent = new Intent(getActivity(), DiaActivity.class);
         startActivity(intent);
     }
 }
