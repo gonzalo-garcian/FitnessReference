@@ -3,18 +3,24 @@ package cat.copernic.kyt3c.fitnessreference;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.support.annotation.DrawableRes;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -42,11 +48,13 @@ public class maps extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        LatLng sydney = new LatLng(-34, 151);
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         miUbicacion();
         // Add a marker in Sydney and move the camera
-        //LatLng sydney = new LatLng(-34, 151);
+
         //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
     }
 
     private void agregarMarcador(double lat, double lng) {
@@ -56,7 +64,9 @@ public class maps extends FragmentActivity implements OnMapReadyCallback {
         marcador = mMap.addMarker(new MarkerOptions()
                 .position(coordenadas)
                 .title("Posicion Actual")
-                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
+                //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher))
+                .icon(bitmapDescriptorFromVector(this, R.drawable.ic_geolocalizacion))
+                );
         mMap.animateCamera(miUbicacion);
     }
 
@@ -90,6 +100,18 @@ public class maps extends FragmentActivity implements OnMapReadyCallback {
         }
     };
 
+    private BitmapDescriptor bitmapDescriptorFromVector(Context context, @DrawableRes int vectorDrawableResourceId) {
+        Drawable background = ContextCompat.getDrawable(context, R.drawable.ic_geolocalizacion);
+        background.setBounds(0, 0, background.getIntrinsicWidth(), background.getIntrinsicHeight());
+        Drawable vectorDrawable = ContextCompat.getDrawable(context, vectorDrawableResourceId);
+        vectorDrawable.setBounds(40, 20, vectorDrawable.getIntrinsicWidth() + 40, vectorDrawable.getIntrinsicHeight() + 20);
+        Bitmap bitmap = Bitmap.createBitmap(background.getIntrinsicWidth(), background.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        background.draw(canvas);
+        vectorDrawable.draw(canvas);
+        return BitmapDescriptorFactory.fromBitmap(bitmap);
+    }
+
     private void miUbicacion() {
         if (ActivityCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
@@ -97,12 +119,13 @@ public class maps extends FragmentActivity implements OnMapReadyCallback {
             ActivityCompat.requestPermissions(this, new String[]
                             {Manifest.permission.ACCESS_FINE_LOCATION},
                     3);
-        } else {
 
+        } else {
+            LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+            Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            actualizarUbicacion(location);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,15000,0,locListener);
         }
-                LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        actualizarUbicacion(location);
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,15000,0,locListener);
+
     }
 }
