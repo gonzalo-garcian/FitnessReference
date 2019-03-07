@@ -27,13 +27,13 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
 
         actividades = new ArrayList<>();
 
-        actividades.add("           DIA 1  -- Lunes             ");
-        actividades.add("           DIA 2  -- Martes            ");
-        actividades.add("           DIA 3  -- Miercoles            ");
-        actividades.add("           DIA 4  -- Jueves            ");
-        actividades.add("           DIA 5  -- Viernes            ");
-        actividades.add("           DIA 6  -- Sabado            ");
-        actividades.add("           DIA 7  -- Domingo            ");
+        actividades.add("DIA 1  -- Lunes");
+        actividades.add("DIA 2  -- Martes");
+        actividades.add("DIA 3  -- Miercoles");
+        actividades.add("DIA 4  -- Jueves");
+        actividades.add("DIA 5  -- Viernes");
+        actividades.add("DIA 6  -- Sabado");
+        actividades.add("DIA 7  -- Domingo");
 
         RecyclerView recyclerView = vista.findViewById(R.id.activi);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

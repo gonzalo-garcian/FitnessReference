@@ -1,8 +1,11 @@
 package cat.copernic.kyt3c.fitnessreference;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -54,6 +57,19 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
             case R.id.ic_estirar:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new EstiramientosFragment()).commit();
+
+            case R.id.ic_geolocalizacion:
+                if (ActivityCompat.checkSelfPermission(this,
+                        Manifest.permission.ACCESS_FINE_LOCATION)
+                        != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(this, new String[]
+                                    {Manifest.permission.ACCESS_FINE_LOCATION},
+                            3);
+                } else {
+
+                }
+                Intent intent = new Intent(MenuActivity.this, maps.class);
+                startActivity(intent);
 
         }
 
