@@ -43,5 +43,14 @@
     <string name="btnComparte">Comparte</string>
     <string name="btnNavegar">Navegar</string>
     <string name="vuelve_a_girarlo_para_volver_al_color_original">Vuelve a girarlo para volver al color original</string>
+    <string name="edit_text_name">Name</string>
+    <string name="input_error_name" />
+    <string name="input_error_email" />
+    <string name="input_error_email_invalid" />
+    <string name="input_error_password" />
+    <string name="input_error_password_length" />
+    <string name="input_error_phone" />
+    <string name="input_error_phone_invalid" />
+    <string name="registration_success" />
 
 </resources>
