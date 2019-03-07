@@ -13,6 +13,7 @@ public class TabEntrenamiento extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tabentrenamientos, container, false);
         return rootView;
+
     }
 
 }

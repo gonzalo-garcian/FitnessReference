@@ -168,6 +168,7 @@ public class DiaActivity extends AppCompatActivity {
     public void openWebsite(View view) {
         String url = txtweb.getText().toString();
 
+
         Uri webpage = Uri.parse(url);
         Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
 
