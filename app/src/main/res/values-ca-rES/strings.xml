@@ -40,6 +40,10 @@
     <string name="tab_text_2">Compartir</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="btnMapa">Mapa</string>
+    <string name="btnComparte">Comparte</string>
+    <string name="btnNavegar">Navegar</string>
+    <string name="vuelve_a_girarlo_para_volver_al_color_original">Vuelve a girarlo para volver al color original</string>
 
 
 </resources>

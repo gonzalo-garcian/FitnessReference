@@ -7,49 +7,17 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".CalendarFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
+    <CalendarView
+        android:id="@+id/Calendario"
+        android:layout_width="379dp"
+        android:layout_height="445dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="8dp"
-        android:text="calendar temporal de kevin"
+        android:layout_marginBottom="198dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CalendarView
-        android:id="@+id/Calendario"
-        android:layout_width="0dp"
-        android:layout_height="315dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/btnCalendario"
-        android:layout_width="98dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/colorAccent"
-        android:elevation="0dp"
-        android:text="@string/btnFuncion"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorLink="@color/colorPrimaryDark"
-
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.03"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Calendario"
-        app:layout_constraintVertical_bias="1.0" />
 </android.support.constraint.ConstraintLayout>
