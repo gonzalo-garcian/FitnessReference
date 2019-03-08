@@ -13,12 +13,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="102dp"
         android:layout_marginEnd="96dp"
-        android:layout_marginBottom="53dp"
+        android:layout_marginBottom="112dp"
+        android:autofillHints=""
+        android:contentDescription="@string/texto_contrasenya"
         android:ems="10"
         android:hint="@string/passwordLogin"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -27,12 +30,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="102dp"
         android:layout_marginEnd="96dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginBottom="24dp"
+        android:autofillHints=""
+        android:contentDescription="@string/texto_email"
         android:ems="10"
         android:hint="@string/e_mailLogin"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/etPasswordLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -41,13 +47,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
         android:layout_marginEnd="161dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="12dp"
         android:background="@color/colorAccent"
         android:text="@string/btnLogIn"
         android:textColor="@color/colorPrimaryDark"
         android:textColorLink="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -58,6 +65,7 @@
         android:layout_marginTop="93dp"
         android:layout_marginEnd="132dp"
         android:layout_marginBottom="115dp"
+        android:contentDescription="@string/LogoDescripcion"
         app:layout_constraintBottom_toTopOf="@+id/etEmailLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,13 +78,30 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
         android:layout_marginEnd="162dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="132dp"
         android:background="@color/colorAccent"
         android:text="@string/signup"
         android:textColor="@color/colorPrimaryDark"
         android:textColorLink="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnIdioma"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorAccent"
+        android:text="@string/idioma"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
 </android.support.constraint.ConstraintLayout>

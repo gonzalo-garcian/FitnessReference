@@ -1,6 +1,11 @@
 package cat.copernic.kyt3c.fitnessreference;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
@@ -11,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.RotateAnimation;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -21,11 +27,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Locale;
+
 public class LogInActivity extends BaseActivity implements
         View.OnClickListener {
 
     private static final String TAG = "EmailPassword";
-
+    Button btnIdioma;
     private EditText mEmailField;
     private EditText mPasswordField;
     ImageView imageView;
@@ -37,11 +45,21 @@ public class LogInActivity extends BaseActivity implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadLocale();
         setContentView(R.layout.activity_login);
 
         // Views
         mEmailField = findViewById(R.id.etEmailLogin);
         mPasswordField = findViewById(R.id.etPasswordLogin);
+        btnIdioma = findViewById(R.id.btnIdioma);
+        btnIdioma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showChangeLanguageDialog();
+
+            }
+        });
+
 
 
         // Buttons
@@ -51,6 +69,48 @@ public class LogInActivity extends BaseActivity implements
         imageView = (ImageView) findViewById(R.id.imageView);
         rotarImagen(imageView);
     }
+
+    private void showChangeLanguageDialog() {
+        final String[] listIdiomas = {"Español", "Català"};
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(LogInActivity.this);
+        mBuilder.setTitle("Seleccione Idioma : ");
+        mBuilder.setSingleChoiceItems(listIdiomas, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                if(i == 0){
+                    setLocale("es");
+                    recreate();
+                }
+                else if(i == 1){
+                    setLocale("ca");
+                    recreate();
+                }
+
+            }
+        });
+        AlertDialog mDialog = mBuilder.create();
+
+        mDialog.show();
+    }
+
+    private void setLocale(String lang) {
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
+
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("My_Lang", lang);
+        editor.apply();
+
+    }
+    public void loadLocale(){
+        SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        String language = prefs.getString("My_Lang","");
+        setLocale(language);
+    }
+
     private void rotarImagen(View view){
         RotateAnimation animation = new RotateAnimation(0, 360,
                 RotateAnimation.RELATIVE_TO_SELF, 0.5f,
