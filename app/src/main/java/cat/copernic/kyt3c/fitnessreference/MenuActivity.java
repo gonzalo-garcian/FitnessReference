@@ -1,6 +1,7 @@
 package cat.copernic.kyt3c.fitnessreference;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -15,6 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -23,6 +26,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawer;
     public FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,14 +39,16 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        View headerView = navigationView.getHeaderView(0);
+        TextView navUsername = headerView.findViewById(R.id.txtViewCorreoUsuarioActual);
+        navUsername.setText(mAuth.getCurrentUser().getEmail());
+
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new RecyclerviewFragment()).commit();
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-
     }
 
     @Override
@@ -65,15 +71,15 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.ic_geolocalizacion:
+
                 if (ActivityCompat.checkSelfPermission(this,
                         Manifest.permission.ACCESS_FINE_LOCATION)
                         != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(this, new String[]
                                     {Manifest.permission.ACCESS_FINE_LOCATION},
                             3);
-                } else {
-
                 }
+
                 Intent intent = new Intent(MenuActivity.this, maps.class);
                 startActivity(intent);
                 break;
