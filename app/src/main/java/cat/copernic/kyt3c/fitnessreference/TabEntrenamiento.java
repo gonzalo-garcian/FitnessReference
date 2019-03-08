@@ -23,12 +23,16 @@ public class TabEntrenamiento extends Fragment {
         recyclerEntrenamientos = vista.findViewById(R.id.recyclerEntrenamiento);
         recyclerEntrenamientos.setLayoutManager(new LinearLayoutManager(getContext()));
         llenarLista();
+        AdapterEntrenamientos adapter=new AdapterEntrenamientos(listaEntrenamientos);
+        recyclerEntrenamientos.setAdapter(adapter);
         return vista;
 
     }
 
     private void llenarLista() {
         listaEntrenamientos.add(new Entrenamiento("Sprints","Carrerar cortas donde priorizamos velocidad"));
+        listaEntrenamientos.add(new Entrenamiento("Saltos","Saltos repetidos en posicion"));
     }
+
 
 }

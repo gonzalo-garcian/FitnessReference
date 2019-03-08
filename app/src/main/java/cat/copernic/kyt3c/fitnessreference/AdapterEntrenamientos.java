@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class AdapterEntrenamientos extends RecyclerView.Adapter<AdapterEntrenamientos.ViewHolderEntrenamientos> {
 
     ArrayList<Entrenamiento> listEntrenamientos;
-    private LayoutInflater inflater;
+
 
     public AdapterEntrenamientos(ArrayList<Entrenamiento> listEntrenamientos) {
 
@@ -21,18 +21,20 @@ public class AdapterEntrenamientos extends RecyclerView.Adapter<AdapterEntrenami
     @NonNull
     @Override
     public AdapterEntrenamientos.ViewHolderEntrenamientos onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view= inflater.inflate(R.layout.entrenamiento_list,viewGroup,false);
-        return null;
+        View view= LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.entrenamiento_list,null,false);
+        return new ViewHolderEntrenamientos(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterEntrenamientos.ViewHolderEntrenamientos viewHolderEntrenamientos, int i) {
+    public void onBindViewHolder(@NonNull AdapterEntrenamientos.ViewHolderEntrenamientos viewHolderEntrenamientos, int position) {
+        viewHolderEntrenamientos.asignarDatos(listEntrenamientos.get(position));
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listEntrenamientos.size();
     }
 
     public class ViewHolderEntrenamientos extends RecyclerView.ViewHolder {
@@ -43,6 +45,10 @@ public class AdapterEntrenamientos extends RecyclerView.Adapter<AdapterEntrenami
             nombreEntrenamiento=itemView.findViewById(R.id.nombreEntrenamiento);
             descripcionEntrenamiento=itemView.findViewById(R.id.descripcionEntrenamiento);
 
+        }
+
+        public void asignarDatos(Entrenamiento entrenamiento) {
+            entrenamiento = new Entrenamiento(entrenamiento.getNombre(),entrenamiento.getDescripcion());
         }
     }
 }
