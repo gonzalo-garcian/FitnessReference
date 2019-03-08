@@ -21,7 +21,7 @@ public class AdapterEntrenamientos extends RecyclerView.Adapter<AdapterEntrenami
     @NonNull
     @Override
     public AdapterEntrenamientos.ViewHolderEntrenamientos onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view= inflater
+        View view= inflater.inflate(R.layout.entrenamiento_list,viewGroup,false);
         return null;
     }
 
