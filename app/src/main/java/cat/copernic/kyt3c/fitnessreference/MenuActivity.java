@@ -73,9 +73,8 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.ic_ajustes:
-                Intent intentEditarPerfil = new Intent(MenuActivity.this, EditarPerfilFragment.class);
-                startActivity(intentEditarPerfil);
-
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new EditarPerfilFragment()).commit();
                 break;
 
             case R.id.ic_geolocalizacion:
