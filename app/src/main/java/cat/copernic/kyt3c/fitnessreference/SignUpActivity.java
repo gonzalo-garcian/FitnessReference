@@ -40,10 +40,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onStart() {
         super.onStart();
-
-        if (mAuth.getCurrentUser() != null) {
-            //handle the already login user
-        }
     }
 
     private void registerUser() {
