@@ -1,70 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--- GENERALES -->
     <string name="app_name">FitnessReference</string>
-    <string name="push">PUSH</string>
+    <string name="correo">user@fitnessreference.cat</string>
+    <!--- FIN GENERALES -->
+
+    <!--- LOGIN -->
     <string name="email">Correo</string>
     <string name="passwordLogin">Contraseña</string>
-    <string name="e_mailLogin">Correo</string>
     <string name="btnLogIn">Iniciar Sesión</string>
-    <string name="horario">Calendario</string>
-    <string name="editarPerfil">Editar Perfil</string>
-    <string name="estad_sticas">Estadísticas</string>
-    <string name="reiniciar_progreso">Borrar Usuario</string>
-    <string name="gonzalo_garc_a">Gonzalo García</string>
+    <string name="signup">Registro</string>
+    <string name="registro">Registro</string>
+    <string name="idioma">Idioma</string>
+    <string name="auth_failed">Autentificando ha fallado</string>
+    <string name="loading">Autentificando credenciales</string>
+    <string name="LogoDescripcion">Logo de Fitness Reference</string>
+    <string name="texto_email">texto Email</string>
+    <string name="texto_contrasenya">texto contrasenya</string>
+    <!--- FIN LOGIN -->
+
+    <!--- REGISTRO -->
+    <string name="edit_text_name">Nombre</string>
+    <string name="input_error_name">Nombre incorrecto</string>
+    <string name="input_error_email">Email incorrecto</string>
+    <string name="input_error_email_invalid">Email invalido</string>
+    <string name="input_error_password">Contraseña incorrecta</string>
+    <string name="input_error_password_length">Contraseña demasiado corta</string>
+    <string name="input_error_phone">Telefono incorrecto</string>
+    <string name="input_error_phone_invalid">Telefono no valido</string>
+    <string name="registration_success">Perfil creado!</string>
+    <!--- FIN REGISTRO -->
+
+    <!--- MENU -->
+    <string name="bienvenido">Bienvenido a FitnessReference:</string>
     <string name="navigation_drawer_open">Abrir navegación</string>
     <string name="navigation_drawer_close">Cerrar navegación</string>
-    <string name="calendar">Calendario</string>
-    <string name="menu_temporal_de_gonzalo">Menu Temporal de gonzalo</string>
-    <string name="recicler">recicler</string>
-    <string name="btnFuncion">Boton</string>
-    <string name="correo">gonzalo.garcia@copernic.cat</string>
     <string name="planDeEntrenamiento">Plan De Entrenamiento</string>
-    <string name="title_activity_maps">Map</string>
-    <string name="escribe_la_web_aqui">Escribe la web aqui</string>
-    <string name="web_aqui">http://www.fitnessreference.cat</string>
-    <string name="auth_failed">auth fallo</string>
-    <string name="loading">Autentificando credenciales</string>
-    <string name="comparte">Comparte</string>
-    <string name="signup">Registro</string>
     <string name="estiramientos">Estiramientos</string>
-    <string name="normal_map" translatable="false">mapa normal</string>
-    <string name="satellite_map">mapa satellite</string>
-    <string name="terrain_map">mapa tierra</string>
-    <string name="hybrid_map">mapa hibrido</string>
-    <string name="lat_long_snippet">Lat: %1$.5f, Long: %2$.5f</string>
-    <string name="dropped_pin">Dropped Pin</string>
-    <string name="poi">poi</string>
+    <string name="calendar">Calendario</string>
+    <string name="horario">Calendario</string>
     <string name="geolocalizacion">Geolocalización</string>
+    <string name="editarPerfil">Editar Perfil</string>
+    <string name="reiniciar_progreso">Borrar Usuario</string>
+    <!--- FIN MENU -->
+
+    <!--- ACTIVIDADES -->
+
+            <!--- mapa -->
+    <string name="title_activity_maps">Mapa</string>
+
+            <!--- compartir -->
+    <string name="web_aqui">http://www.fitnessreference.cat</string>
+    <string name="btnComparte">Comparte</string>
+    <string name="btnNavegar">Navegar</string>
+    <string name="compartirmsg">Escribe aqui el mensaje que quieras compartir con tus amigos!</string>
+    <string name="compartirweb">Tienes dudas sobre nuestra aplicacion? Visita nuesta pagina web.</string>
+
+            <!--- tabbed page -->
     <string name="title_activity_dia">DiaActivity</string>
     <string name="tab_text_1">Entrenamiento</string>
     <string name="tab_text_2">Compartir</string>
     <string name="action_settings">Ajustes</string>
-    <string name="ajustes">Ajustos</string>
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="btnMapa">Donde estoy?</string>
-    <string name="btnComparte">Comparte</string>
-    <string name="btnNavegar">Navegar</string>
+
+            <!--- calendar -->
     <string name="vuelve_a_girarlo_para_volver_al_color_original">Vuelve a girarlo para volver al color original</string>
-    <string name="edit_text_name">Name</string>
-    <string name="input_error_name" />
-    <string name="input_error_email" />
-    <string name="input_error_email_invalid" />
-    <string name="input_error_password" />
-    <string name="input_error_password_length" />
-    <string name="input_error_phone" />
-    <string name="input_error_phone_invalid" />
-    <string name="registration_success" />
-    <string name="idioma">Idioma</string>
-    <string name="LogoDescripcion">Logo de Fitness Reference</string>
-    <string name="texto_email">texto Email</string>
-    <string name="texto_contrasenya">texto contrasenya</string>
+
+            <!--- recycler -->
     <string name="exercici">Ejercicio Hecho!</string>
-    <string name="compartirmsg">Escribe aqui el mensaje que quieras compartir con tus amigos!</string>
-    <string name="compartirweb">Tienes dudas sobre nuestra aplicacion? Visita nuesta pagina web.</string>
-    <string name="compartirloc">Tu localizacion actual es:</string>
-    <string name="compartirpre">Para compartir un mensaje con tus amigos, gira el telefono!</string>
-    <string name="bienvenido">Bienvenido a FitnessReference:</string>
-    <string name="registro">Registro</string>
+    <string name="dia">DÍA</string>
+
+            <!--- estiramientos -->
     <string name="antes">Antes</string>
     <string name="despues">Despues</string>
-    <string name="dia">DÍA</string>
+
+    <!--- FIN ACTIVIDADES -->
+
 </resources>
