@@ -9,7 +9,7 @@
     <string name="horario">Calendari</string>
     <string name="ajustes">Ajustes</string>
     <string name="estad_sticas">Estadístiques</string>
-    <string name="reiniciar_progreso">Reiniciar progrés</string>
+    <string name="reiniciar_progreso">Borrar Usuari</string>
     <string name="gonzalo_garc_a">Usuari</string>
     <string name="navigation_drawer_open">Obrir navegacio</string>
     <string name="navigation_drawer_close">Tancar navegacio</string>
@@ -62,6 +62,6 @@
     <string name="compartirweb">Tens dubtes sobre la nostra aplicació? Visita nuesta pàgina web o qualsevol altre!.</string>
     <string name="compartirloc">La teva localització actual és:</string>
     <string name="compartirpre">Per compartir un missatge amb els teus amics, gira el telefon!</string>
-
-
+    <string name="bienvenido">Benvingut a FitnessReference:</string>
+    <string name="loc">Localització encara no ha estat definida</string>
 </resources>

@@ -6,15 +6,20 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.support.annotation.DrawableRes;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
-
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -25,6 +30,10 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 public class maps extends FragmentActivity implements OnMapReadyCallback {
 
@@ -42,6 +51,9 @@ public class maps extends FragmentActivity implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
+
     }
 
 
@@ -52,7 +64,7 @@ public class maps extends FragmentActivity implements OnMapReadyCallback {
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         miUbicacion();
         // Add a marker in Sydney and move the camera
-
+        ubi();
         //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
 
     }
@@ -64,7 +76,7 @@ public class maps extends FragmentActivity implements OnMapReadyCallback {
         marcador = mMap.addMarker(new MarkerOptions()
                 .position(coordenadas)
                 .title("Posicion Actual")
-                //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher))
+
                 .icon(bitmapDescriptorFromVector(this, R.drawable.ic_geolocalizacion))
                 );
         mMap.animateCamera(miUbicacion);
@@ -127,5 +139,21 @@ public class maps extends FragmentActivity implements OnMapReadyCallback {
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,15000,0,locListener);
         }
 
+    }
+    public void ubi(){
+        if (lat != 0.0 && lng != 0.0) {
+            try {
+                Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+                List<Address> list = geocoder.getFromLocation(
+                        lat, lng, 1);
+                if (!list.isEmpty()) {
+                    Address DirCalle = list.get(0);
+                    //DirCalle.getAddressLine(0) - El textView se llama; textUbi
+                    String estoesloquequieroquesalga = DirCalle.getAddressLine(0);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
