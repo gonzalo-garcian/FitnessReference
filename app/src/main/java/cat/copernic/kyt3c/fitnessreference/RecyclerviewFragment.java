@@ -27,31 +27,9 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
 
         actividades = new ArrayList<>();
 
-        actividades.add("DIA #1");
-        actividades.add("DIA #2");
-        actividades.add("DIA #3");
-        actividades.add("DIA #4");
-        actividades.add("DIA #5");
-        actividades.add("DIA #6");
-        actividades.add("DIA #7");
-        actividades.add("DIA #8");
-        actividades.add("DIA #9");
-        actividades.add("DIA #10");
-        actividades.add("DIA #11");
-        actividades.add("DIA #12");
-        actividades.add("DIA #13");
-        actividades.add("DIA #14");
-        actividades.add("DIA #15");
-        actividades.add("DIA #16");
-        actividades.add("DIA #17");
-        actividades.add("DIA #18");
-        actividades.add("DIA #19");
-        actividades.add("DIA #20");
-        actividades.add("DIA #21");
-        actividades.add("DIA #22");
-        actividades.add("DIA #23");
-        actividades.add("DIA #24");
-        actividades.add("DIA #25");
+        for (int i = 1; i <= 25; i++) {
+            actividades.add(getString(R.string.dia)+" #"+i);
+        }
 
         RecyclerView recyclerView = vista.findViewById(R.id.activi);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -66,7 +44,7 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
     }
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(getContext(), "Este ejericio del " + adapter.getItem(position) + " quieres compartirlo con tus amigos? Mandales un mensaje.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Este ejericio es del DIA #"+position+ " quieres compartirlo? Entra en el tab compartir.", Toast.LENGTH_SHORT).show();
         actividades.set(position,getString(R.string.exercici));
         Intent intent = new Intent(getActivity(), DiaActivity.class);
         startActivity(intent);

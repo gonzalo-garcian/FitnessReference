@@ -29,8 +29,8 @@ public class EstiramientosFragment extends Fragment {
         videoView = vista.findViewById(R.id.estiramientosVView);
         listView = vista.findViewById(R.id.EstiramientosList);
         videoList=new ArrayList<>();
-        videoList.add("antes");
-        videoList.add("despues");
+        videoList.add(getString(R.string.antes));
+        videoList.add(getString(R.string.despues));
 
         adapter= new ArrayAdapter(getContext(),android.R.layout.simple_list_item_1,videoList);
         listView.setAdapter(adapter);

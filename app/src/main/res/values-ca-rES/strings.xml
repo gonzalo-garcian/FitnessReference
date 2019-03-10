@@ -63,4 +63,9 @@
     <string name="compartirloc">La teva localització actual és:</string>
     <string name="compartirpre">Per compartir un missatge amb els teus amics, gira el telefon!</string>
     <string name="bienvenido">Benvingut a FitnessReference:</string>
+    <string name="registro">Registre</string>
+    <string name="antes">Abans</string>
+    <string name="despues">Després</string>
+    <string name="dia">DIA</string>
+    <string name="editarPerfil">Editar Perfil</string>
 </resources>
