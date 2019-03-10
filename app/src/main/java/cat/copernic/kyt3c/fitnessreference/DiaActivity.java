@@ -26,6 +26,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class DiaActivity extends AppCompatActivity {
@@ -69,7 +70,6 @@ public class DiaActivity extends AppCompatActivity {
 
         txtcom = findViewById(R.id.txtCompartir);
         txtweb = findViewById(R.id.txtWeb);
-
     }
 
 
