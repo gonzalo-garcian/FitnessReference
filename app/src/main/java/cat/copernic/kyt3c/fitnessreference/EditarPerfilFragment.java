@@ -7,15 +7,15 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Objects;
 
-public class EditarPerfilFragment extends AppCompatActivity implements View.OnClickListener{
+public class EditarPerfilFragment extends AppCompatActivity implements View.OnClickListener {
 
     private EditText editTextName, editTextEmail, editTextPassword, editTextPhone;
 
@@ -33,7 +33,7 @@ public class EditarPerfilFragment extends AppCompatActivity implements View.OnCl
 
         mAuth = FirebaseAuth.getInstance();
 
-        findViewById(R.id.button_register).setOnClickListener(this);
+        findViewById(R.id.button_update).setOnClickListener(this);
     }
 
     @Override
@@ -89,42 +89,32 @@ public class EditarPerfilFragment extends AppCompatActivity implements View.OnCl
             return;
         }
 
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+        Objects.requireNonNull(mAuth.getCurrentUser()).updateEmail(email);
+        mAuth.getCurrentUser().updatePassword(password);
 
-                        if (task.isSuccessful()) {
+        User user = new User(
+                name,
+                email,
+                phone
+        );
 
-                            User user = new User(
-                                    name,
-                                    email,
-                                    phone
-                            );
-
-                            FirebaseDatabase.getInstance().getReference("Users")
-                                    .child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
-                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()) {
-                                        Toast.makeText(EditarPerfilFragment.this, "Registro Completado", Toast.LENGTH_LONG).show();
-                                        EditarPerfilFragment.this.finish();
-                                    }
-                                }
-                            });
-
-                        } else {
-                            Toast.makeText(EditarPerfilFragment.this, Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
+        FirebaseDatabase.getInstance().getReference("Users")
+                .child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
+                .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(EditarPerfilFragment.this, "Update Completado", Toast.LENGTH_LONG).show();
+                    EditarPerfilFragment.this.finish();
+                }
+            }
+        });
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.button_register:
+            case R.id.button_update:
                 registerUser();
                 break;
         }
