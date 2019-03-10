@@ -32,7 +32,7 @@ public class TabEntrenamiento extends Fragment {
         // Inflate the layout for this fragment
         ListView lv = (ListView) view.findViewById(R.id.listaEntrenamientos);
         lista = new ArrayList<>();
-        lista.add("Step Ups");
+        lista.add("Ejercicio del dia - Random");
         lista.add("Jumping Jacks");
         lista.add("High Knees Running in Place");
         lista.add("Plank");
@@ -45,6 +45,7 @@ public class TabEntrenamiento extends Fragment {
         lista.add("Squat");
         lista.add("Push - Ups");
         lista.add("Abdominales");
+        lista.add("Step Ups");
         adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, lista);
         lv.setAdapter(adapter);
 
@@ -54,7 +55,9 @@ public class TabEntrenamiento extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
-                        url = "https://www.youtube.com/watch?v=8wugVATDFok";
+                        String nombres[]={"https://www.youtube.com/watch?v=8wugVATDFok","https://www.youtube.com/watch?v=95j1mH27eXc","https://www.youtube.com/watch?v=j8XGysKsPFc","https://www.youtube.com/watch?v=OuFDY0fwlvk","https://www.youtube.com/watch?v=5w6k8WJlEeA","https://www.youtube.com/watch?v=npzvRa-15SY","https://www.youtube.com/watch?v=EtPHEAOIxUU","https://www.youtube.com/watch?v=oyLAcXHZTOc","https://www.youtube.com/watch?v=B5PPBUagc_4","https://www.youtube.com/watch?v=OsUz898onTE","https://www.youtube.com/watch?v=beSvHVN8pyc","https://www.youtube.com/watch?v=NklcXdowKww","https://www.youtube.com/watch?v=dgCRY7L52mE"};
+                        int numAle = (int) (Math.random() * 11);
+                        url = nombres[numAle];
                         webpage = Uri.parse(url);
                         intent = new Intent(Intent.ACTION_VIEW, webpage);
                         intent.resolveActivity(getActivity().getPackageManager());
@@ -139,6 +142,13 @@ public class TabEntrenamiento extends Fragment {
                         break;
                     case 12:
                         url = "https://www.youtube.com/watch?v=dgCRY7L52mE";
+                        webpage = Uri.parse(url);
+                        intent = new Intent(Intent.ACTION_VIEW, webpage);
+                        intent.resolveActivity(getActivity().getPackageManager());
+                        startActivity(intent);
+                        break;
+                    case 13:
+                        url = "https://www.youtube.com/watch?v=8wugVATDFok";
                         webpage = Uri.parse(url);
                         intent = new Intent(Intent.ACTION_VIEW, webpage);
                         intent.resolveActivity(getActivity().getPackageManager());
