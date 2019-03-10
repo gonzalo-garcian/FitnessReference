@@ -33,7 +33,7 @@
         android:autofillHints=""
         android:contentDescription="@string/texto_email"
         android:ems="10"
-        android:hint="@string/e_mailLogin"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/etPasswordLogin"
         app:layout_constraintEnd_toEndOf="parent"

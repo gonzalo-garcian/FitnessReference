@@ -1,71 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--- GENERALES -->
     <string name="app_name">FitnessReference</string>
-    <string name="push">Push</string>
+    <string name="correo">user@fitnessreference.cat</string>
+    <!--- FIN GENERALES -->
+
+    <!--- LOGIN -->
     <string name="email">Correu</string>
     <string name="passwordLogin">Contrasenya</string>
-    <string name="e_mailLogin">Correu</string>
-    <string name="btnLogIn">Iniciar Sessió</string>
-    <string name="horario">Calendari</string>
-    <string name="ajustes">Ajustes</string>
-    <string name="estad_sticas">Estadístiques</string>
-    <string name="reiniciar_progreso">Borrar Usuari</string>
-    <string name="gonzalo_garc_a">Usuari</string>
-    <string name="navigation_drawer_open">Obrir navegacio</string>
-    <string name="navigation_drawer_close">Tancar navegacio</string>
-    <string name="calendar">Calendari</string>
-    <string name="menu_temporal_de_gonzalo">"menu "</string>
-    <string name="recicler">RecyclerView</string>
-    <string name="btnFuncion">Botó</string>
-    <string name="correo">gonzalo.garcia@copernic.cat</string>
-    <string name="planDeEntrenamiento">Pla De Entrenament</string>
-    <string name="title_activity_maps">Mapa</string>
-    <string name="escribe_la_web_aqui">Escribe la web aqui</string>
-    <string name="web_aqui">http://www.fitnessreference.cat/</string>
-    <string name="auth_failed">auth fallo</string>
-    <string name="loading" >Autentificant Credencials</string>
-    <string name="comparte">Comparteix</string>
+    <string name="btnLogIn">Inicia Sessió</string>
     <string name="signup">Registre</string>
+    <string name="registro">Registre</string>
+    <string name="idioma">Idioma</string>
+    <string name="auth_failed">Auntentificacio ha fallat</string>
+    <string name="loading">Autentificando credenciales</string>
+    <string name="LogoDescripcion">Autentificant Credencials</string>
+    <string name="texto_email">Text Email</string>
+    <string name="texto_contrasenya">Texto Contrasenya</string>
+    <!--- FIN LOGIN -->
+
+    <!--- REGISTRO -->
+    <string name="edit_text_name">Nom</string>
+    <string name="input_error_name">Nom incorrecte</string>
+    <string name="input_error_email">Email incorrecte</string>
+    <string name="input_error_email_invalid">Email invàlid</string>
+    <string name="input_error_password">Contrasenya incorrecta</string>
+    <string name="input_error_password_length">Contrasenya massa curta</string>
+    <string name="input_error_phone">Telèfon incorrecte</string>
+    <string name="input_error_phone_invalid">Telèfon invàlid</string>
+    <string name="registration_success">Perfil creat!</string>
+    <!--- FIN REGISTRO -->
+
+    <!--- MENU -->
+    <string name="bienvenido">Benvingut a FitnessReference:</string>
+    <string name="navigation_drawer_open">Abrir navegació</string>
+    <string name="navigation_drawer_close">Tancar navegació</string>
+    <string name="planDeEntrenamiento">Pla De Estiraments</string>
     <string name="estiramientos">Estiraments</string>
-    <string name="normal_map">mapa normal</string>
-    <string name="satellite_map">mapa satèlit</string>
-    <string name="terrain_map">mapa terra</string>
-    <string name="hybrid_map">mapa hibrid</string>
-    <string name="lat_long_snippet">Lat: %1$.5f, Long: %2$.5f</string>
-    <string name="dropped_pin">Dropped Pin</string>
-    <string name="poi">poi</string>
-    <string name="geolocalizacion">Geolocalizació</string>
-    <string name="title_activity_dia">DiaActivity</string>
-    <string name="tab_text_1">Entrenament</string>
-    <string name="tab_text_2">Compartir</string>
-    <string name="action_settings">Ajustos</string>
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="btnMapa">On soc?</string>
+    <string name="calendar">Calendari</string>
+    <string name="horario">Calendari</string>
+    <string name="geolocalizacion">Geolocalització</string>
+    <string name="editarPerfil">Editar Perfil</string>
+    <string name="reiniciar_progreso">Borrar Usuari</string>
+    <!--- FIN MENU -->
+
+    <!--- ACTIVIDADES -->
+
+    <!--- mapa -->
+    <string name="title_activity_maps">Mapa</string>
+
+    <!--- compartir -->
+    <string name="web_aqui">http://www.fitnessreference.cat</string>
     <string name="btnComparte">Comparteix</string>
     <string name="btnNavegar">Navegar</string>
-    <string name="vuelve_a_girarlo_para_volver_al_color_original">Torna a girar per tornar al color original</string>
-    <string name="idioma">Idioma</string>
-    <string name="LogoDescripcion">Logo de Fitness Reference</string>
-    <string name="texto_email">texto Email</string>
-    <string name="texto_contrasenya">texto contrasenya</string>
-    <string name="edit_text_name">Name</string>
-    <string name="input_error_name" />
-    <string name="input_error_email" />
-    <string name="input_error_email_invalid" />
-    <string name="input_error_password" />
-    <string name="input_error_password_length" />
-    <string name="input_error_phone" />
-    <string name="input_error_phone_invalid" />
-    <string name="registration_success" />
-    <string name="exercici">Exercici fet!</string>
-    <string name="compartirmsg">Escriu aquí el missatge que vulguis compartir amb els teus amics!</string>
-    <string name="compartirweb">Tens dubtes sobre la nostra aplicació? Visita nuesta pàgina web o qualsevol altre!.</string>
-    <string name="compartirloc">La teva localització actual és:</string>
-    <string name="compartirpre">Per compartir un missatge amb els teus amics, gira el telefon!</string>
-    <string name="bienvenido">Benvingut a FitnessReference:</string>
-    <string name="registro">Registre</string>
+    <string name="compartirmsg">Escriu aquí el missatge que vulguis compartir!</string>
+    <string name="compartirweb">Tens dubtes sobre la nostra aplicació? Visita la nostra pàgina web.</string>
+
+    <!--- tabbed page -->
+    <string name="title_activity_dia">DiaActivity</string>
+    <string name="tab_text_1">Entrenaments</string>
+    <string name="tab_text_2">Comparteix</string>
+    <string name="action_settings">Ajustos</string>
+
+    <!--- calendar -->
+    <string name="vuelve_a_girarlo_para_volver_al_color_original">Torna a girar-lo per tornar al color original</string>
+
+    <!--- recycler -->
+    <string name="exercici">Exercici Fet!</string>
+    <string name="dia">DIA</string>
+
+    <!--- estiramientos -->
     <string name="antes">Abans</string>
     <string name="despues">Després</string>
-    <string name="dia">DIA</string>
-    <string name="editarPerfil">Editar Perfil</string>
+
+    <!--- FIN ACTIVIDADES -->
+
 </resources>
