@@ -24,34 +24,35 @@ public class EstiramientosFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View vista = inflater.inflate(R.layout.activity_estiramientos,container,false);
+        View vista = inflater.inflate(R.layout.activity_estiramientos, container, false);
 
         videoView = vista.findViewById(R.id.estiramientosVView);
         listView = vista.findViewById(R.id.EstiramientosList);
-        videoList=new ArrayList<>();
+        videoList = new ArrayList<>();
         videoList.add(getString(R.string.antes));
         videoList.add(getString(R.string.despues));
 
-        adapter= new ArrayAdapter(getContext(),android.R.layout.simple_list_item_1,videoList);
+        adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, videoList);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
+                switch (position) {
                     case 0:
-                        videoView.setVideoURI(Uri.parse("android.resource://"+getActivity().getPackageName()+"/"+R.raw.antes));
+                        videoView.setVideoURI(Uri.parse("android.resource://" + getActivity().getPackageName() + "/" + R.raw.antes));
                         break;
                     case 1:
-                        videoView.setVideoURI(Uri.parse("android.resource://"+getActivity().getPackageName()+"/"+R.raw.despues));
+                        videoView.setVideoURI(Uri.parse("android.resource://" + getActivity().getPackageName() + "/" + R.raw.despues));
                         break;
-                        default:
-                            break;
+                    default:
+                        break;
 
 
                 }
                 videoView.setMediaController(new MediaController(getContext()));
-            videoView.requestFocus();
-            videoView.start();}
+                videoView.requestFocus();
+                videoView.start();
+            }
         });
         return vista;
     }

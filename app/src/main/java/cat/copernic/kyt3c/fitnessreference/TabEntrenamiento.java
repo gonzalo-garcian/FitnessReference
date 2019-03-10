@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.MediaController;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 
 public class TabEntrenamiento extends Fragment {
@@ -44,15 +45,14 @@ public class TabEntrenamiento extends Fragment {
         lista.add("Squat");
         lista.add("Push - Ups");
         lista.add("Abdominales");
-        adapter= new ArrayAdapter(getContext(),android.R.layout.simple_list_item_1,lista);
+        adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, lista);
         lv.setAdapter(adapter);
-
 
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
+                switch (position) {
                     case 0:
                         url = "https://www.youtube.com/watch?v=8wugVATDFok";
                         webpage = Uri.parse(url);
@@ -150,7 +150,7 @@ public class TabEntrenamiento extends Fragment {
 
 
                 }
-                }
+            }
         });
         return view;
     }

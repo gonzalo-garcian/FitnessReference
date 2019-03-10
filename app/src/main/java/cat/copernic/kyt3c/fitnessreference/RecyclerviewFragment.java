@@ -12,10 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdapter.ItemClickListener{
+public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdapter.ItemClickListener {
 
     MyRecyclerViewAdapter adapter;
     ArrayList<String> actividades;
@@ -24,12 +25,12 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View vista = inflater.inflate(R.layout.activity_recicler,container,false);
+        View vista = inflater.inflate(R.layout.activity_recicler, container, false);
 
         actividades = new ArrayList<>();
 
         for (int i = 1; i <= 25; i++) {
-            actividades.add(getString(R.string.dia)+" #"+i);
+            actividades.add(getString(R.string.dia) + " #" + i);
         }
 
         RecyclerView recyclerView = vista.findViewById(R.id.activi);
@@ -43,10 +44,11 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
 
         return vista;
     }
+
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(getContext(), "Este ejericio es del DIA #"+position+ " quieres compartirlo? Entra en el tab compartir.", Toast.LENGTH_SHORT).show();
-        actividades.set(position,getString(R.string.exercici));
+        Toast.makeText(getContext(), "Este ejericio es del DIA #" + position + " quieres compartirlo? Entra en el tab compartir.", Toast.LENGTH_SHORT).show();
+        actividades.set(position, getString(R.string.exercici));
         Intent intent = new Intent(getActivity(), DiaActivity.class);
         startActivity(intent);
     }

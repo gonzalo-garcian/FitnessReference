@@ -28,7 +28,7 @@ public class EditarPerfilFragment extends Fragment implements View.OnClickListen
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View vista = inflater.inflate(R.layout.activity_editar_perfil_fragment,container,false);
+        View vista = inflater.inflate(R.layout.activity_editar_perfil_fragment, container, false);
 
         editTextName = vista.findViewById(R.id.update_text_name);
         editTextEmail = vista.findViewById(R.id.update_text_email);

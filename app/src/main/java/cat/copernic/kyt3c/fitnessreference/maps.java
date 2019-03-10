@@ -17,6 +17,7 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
+
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -27,6 +28,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
@@ -48,7 +50,6 @@ public class maps extends FragmentActivity implements OnMapReadyCallback {
         mapFragment.getMapAsync(this);
 
 
-
     }
 
 
@@ -68,7 +69,7 @@ public class maps extends FragmentActivity implements OnMapReadyCallback {
                 .title("Posicion Actual")
 
                 .icon(bitmapDescriptorFromVector(this, R.drawable.ic_geolocalizacion))
-                );
+        );
         mMap.animateCamera(miUbicacion);
     }
 
@@ -126,11 +127,12 @@ public class maps extends FragmentActivity implements OnMapReadyCallback {
             LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             actualizarUbicacion(location);
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,15000,0,locListener);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 15000, 0, locListener);
         }
 
     }
-    public void ubi(){
+
+    public void ubi() {
         if (lat != 0.0 && lng != 0.0) {
             try {
                 Geocoder geocoder = new Geocoder(this, Locale.getDefault());

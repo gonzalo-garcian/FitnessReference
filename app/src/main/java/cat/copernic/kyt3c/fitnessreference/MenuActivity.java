@@ -18,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -48,14 +49,14 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new RecyclerviewFragment()).commit();
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        switch (menuItem.getItemId()){
+        switch (menuItem.getItemId()) {
             case R.id.ic_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new RecyclerviewFragment()).commit();
@@ -121,10 +122,10 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public void onBackPressed(){
-        if (drawer.isDrawerOpen(GravityCompat.START)){
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }else{
+        } else {
             super.onBackPressed();
         }
     }

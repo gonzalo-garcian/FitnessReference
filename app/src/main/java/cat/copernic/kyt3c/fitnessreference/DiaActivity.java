@@ -96,7 +96,6 @@ public class DiaActivity extends AppCompatActivity {
     }
 
 
-
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
@@ -110,7 +109,7 @@ public class DiaActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
 
-            switch (position){
+            switch (position) {
                 case 0:
                     TabEntrenamiento tabE = new TabEntrenamiento();
                     return tabE;
@@ -118,8 +117,8 @@ public class DiaActivity extends AppCompatActivity {
                     TabCompartir tabC = new TabCompartir();
                     return tabC;
 
-                    default:
-                        return null;
+                default:
+                    return null;
             }
         }
 
@@ -131,7 +130,7 @@ public class DiaActivity extends AppCompatActivity {
         @Nullable
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position){
+            switch (position) {
                 case 0:
                     return "Entrenamiento";
                 case 1:
@@ -140,7 +139,8 @@ public class DiaActivity extends AppCompatActivity {
             return null;
         }
     }
-    public void openMap(View view){
+
+    public void openMap(View view) {
         if (ActivityCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -155,7 +155,7 @@ public class DiaActivity extends AppCompatActivity {
     }
 
     public void shareText(View view) {
-        String txt = "Enviado desde FitnessReference: "+txtcom.getText().toString();
+        String txt = "Enviado desde FitnessReference: " + txtcom.getText().toString();
         String mimeType = "text/plain";
         ShareCompat.IntentBuilder
                 .from(this)

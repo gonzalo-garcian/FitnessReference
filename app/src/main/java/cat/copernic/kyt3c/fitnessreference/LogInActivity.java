@@ -58,7 +58,6 @@ public class LogInActivity extends BaseActivity implements
         });
 
 
-
         // Buttons
         findViewById(R.id.btnLogin).setOnClickListener(this);
         findViewById(R.id.btnSignUp).setOnClickListener(this);
@@ -74,19 +73,13 @@ public class LogInActivity extends BaseActivity implements
         mBuilder.setSingleChoiceItems(listIdiomas, -1, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int i) {
-                if(i == 0){
+                if (i == 0) {
                     setLocale("es");
                     recreate();
-                }
-                else if(i == 1){
+                } else if (i == 1) {
                     setLocale("ca");
                     recreate();
                 }
-                else if(i == 2){
-                    setLocale("en");
-                    recreate();
-                }
-
             }
         });
         AlertDialog mDialog = mBuilder.create();
@@ -99,20 +92,21 @@ public class LogInActivity extends BaseActivity implements
         Locale.setDefault(locale);
         Configuration config = new Configuration();
         config.locale = locale;
-        getBaseContext().getResources().updateConfiguration(config,getBaseContext().getResources().getDisplayMetrics());
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
 
         SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
         editor.putString("My_Lang", lang);
         editor.apply();
 
     }
-    public void loadLocale(){
+
+    public void loadLocale() {
         SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
-        String language = prefs.getString("My_Lang","");
+        String language = prefs.getString("My_Lang", "");
         setLocale(language);
     }
 
-    private void rotarImagen(View view){
+    private void rotarImagen(View view) {
         RotateAnimation animation = new RotateAnimation(0, 360,
                 RotateAnimation.RELATIVE_TO_SELF, 0.5f,
                 RotateAnimation.RELATIVE_TO_SELF, 0.5f);

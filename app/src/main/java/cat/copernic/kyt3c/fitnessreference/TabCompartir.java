@@ -43,7 +43,7 @@ public class TabCompartir extends Fragment {
         btnCompartir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String txt = "Enviado desde FitnessReference: "+txtcom.getText().toString();
+                String txt = "Enviado desde FitnessReference: " + txtcom.getText().toString();
                 String mimeType = "text/plain";
                 ShareCompat.IntentBuilder
                         .from(getActivity())
@@ -55,15 +55,8 @@ public class TabCompartir extends Fragment {
         });
 
 
-
-
-
         return vista;
     }
-
-
-
-
 
 
 }
