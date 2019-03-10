@@ -68,9 +68,9 @@ public class LogInActivity extends BaseActivity implements
     }
 
     private void showChangeLanguageDialog() {
-        final String[] listIdiomas = {"Español", "Català"};
+        final String[] listIdiomas = {"Español", "Català", "English"};
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(LogInActivity.this);
-        mBuilder.setTitle("Seleccione Idioma : ");
+        mBuilder.setTitle("Seleccione Idioma: ");
         mBuilder.setSingleChoiceItems(listIdiomas, -1, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int i) {
@@ -80,6 +80,10 @@ public class LogInActivity extends BaseActivity implements
                 }
                 else if(i == 1){
                     setLocale("ca");
+                    recreate();
+                }
+                else if(i == 2){
+                    setLocale("en");
                     recreate();
                 }
 
@@ -114,7 +118,7 @@ public class LogInActivity extends BaseActivity implements
                 RotateAnimation.RELATIVE_TO_SELF, 0.5f);
 
         animation.setDuration(2000);
-        animation.setRepeatCount(Animation.INFINITE);
+        animation.setRepeatCount(2);
         animation.setRepeatMode(Animation.REVERSE);
         view.startAnimation(animation);
     }
