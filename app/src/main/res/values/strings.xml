@@ -56,5 +56,6 @@
     <string name="LogoDescripcion">Logo de Fitness Reference</string>
     <string name="texto_email">texto Email</string>
     <string name="texto_contrasenya">texto contrasenya</string>
+    <string name="exercici">Ejercicio Hecho!</string>
 
 </resources>

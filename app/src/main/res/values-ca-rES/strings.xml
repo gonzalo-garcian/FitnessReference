@@ -57,6 +57,7 @@
     <string name="input_error_phone" />
     <string name="input_error_phone_invalid" />
     <string name="registration_success" />
+    <string name="exercici">Exercici fet!</string>
 
 
 </resources>
