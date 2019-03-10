@@ -69,6 +69,11 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                         new EstiramientosFragment()).commit();
                 break;
 
+            case R.id.ic_ajustes:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new EditarPerfilFragment()).commit();
+                break;
+
             case R.id.ic_geolocalizacion:
 
                 if (ActivityCompat.checkSelfPermission(this,
