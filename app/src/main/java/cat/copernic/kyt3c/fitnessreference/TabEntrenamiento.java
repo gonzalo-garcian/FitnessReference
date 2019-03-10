@@ -1,38 +1,42 @@
 package cat.copernic.kyt3c.fitnessreference;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class TabEntrenamiento extends Fragment {
 
-    RecyclerView recyclerEntrenamientos;
-    ArrayList<Entrenamiento> listaEntrenamientos;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View vista = inflater.inflate(R.layout.tabentrenamientos, container, false);
-        listaEntrenamientos = new ArrayList<>();
-        recyclerEntrenamientos = vista.findViewById(R.id.recyclerEntrenamiento);
-        recyclerEntrenamientos.setLayoutManager(new LinearLayoutManager(getContext()));
-        llenarLista();
-        AdapterEntrenamientos adapter=new AdapterEntrenamientos(listaEntrenamientos);
-        recyclerEntrenamientos.setAdapter(adapter);
-        return vista;
+        View view = inflater.inflate(R.layout.tabentrenamientos, container, false);
+        // Inflate the layout for this fragment
+        String[] lista =  {
+                "Saltos",
+                "Sprints",
+                "Nadar"
+        };
 
-    }
+        ListView lv = (ListView) view.findViewById(R.id.listaEntrenamientos);
 
-    private void llenarLista() {
-        listaEntrenamientos.add(new Entrenamiento("Sprints","Carrerar cortas donde priorizamos velocidad"));
-        listaEntrenamientos.add(new Entrenamiento("Saltos","Saltos repetidos en posicion"));
-    }
+        ArrayAdapter<String> lva = new ArrayAdapter<String>(
+                getActivity(), android.R.layout.simple_list_item_1, lista);
+        lv.setAdapter(lva);
 
 
+        return view;
+
+
+
+}
 }
