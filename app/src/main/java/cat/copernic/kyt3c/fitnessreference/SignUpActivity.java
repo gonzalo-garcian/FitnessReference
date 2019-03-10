@@ -7,7 +7,6 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -84,7 +83,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             return;
         }
 
-        if (phone.length() != 10) {
+        if (phone.length() != 9) {
             editTextPhone.setError(getString(R.string.input_error_phone_invalid));
             editTextPhone.requestFocus();
             return;

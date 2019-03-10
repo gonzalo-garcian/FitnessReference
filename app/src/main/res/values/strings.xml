@@ -38,6 +38,7 @@
     <string name="tab_text_1">Entrenamiento</string>
     <string name="tab_text_2">Compartir</string>
     <string name="action_settings">Ajustes</string>
+    <string name="ajustes">Ajustos</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="btnMapa">Donde estoy?</string>
     <string name="btnComparte">Comparte</string>
@@ -62,4 +63,8 @@
     <string name="compartirloc">Tu localizacion actual es:</string>
     <string name="compartirpre">Para compartir un mensaje con tus amigos, gira el telefono!</string>
     <string name="bienvenido">Bienvenido a FitnessReference:</string>
+    <string name="registro">Registro</string>
+    <string name="antes">Antes</string>
+    <string name="despues">Despues</string>
+    <string name="dia">DÍA</string>
 </resources>
