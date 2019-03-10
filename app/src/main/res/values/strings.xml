@@ -20,7 +20,7 @@
     <string name="planDeEntrenamiento">Plan De Entrenamiento</string>
     <string name="title_activity_maps">Map</string>
     <string name="escribe_la_web_aqui">Escribe la web aqui</string>
-    <string name="web_aqui">https://www.fitnessreference.cat</string>
+    <string name="web_aqui">http://www.fitnessreference.cat</string>
     <string name="auth_failed">auth fallo</string>
     <string name="loading">Autentificando credenciales</string>
     <string name="comparte">Comparte</string>
@@ -39,7 +39,7 @@
     <string name="tab_text_2">Compartir</string>
     <string name="action_settings">Ajustes</string>
     <string name="section_format">Hello World from section: %1$d</string>
-    <string name="btnMapa">Mapa</string>
+    <string name="btnMapa">Donde estoy?</string>
     <string name="btnComparte">Comparte</string>
     <string name="btnNavegar">Navegar</string>
     <string name="vuelve_a_girarlo_para_volver_al_color_original">Vuelve a girarlo para volver al color original</string>
@@ -57,5 +57,9 @@
     <string name="texto_email">texto Email</string>
     <string name="texto_contrasenya">texto contrasenya</string>
     <string name="exercici">Ejercicio Hecho!</string>
+    <string name="compartirmsg">Escribe aqui el mensaje que quieras compartir con tus amigos!</string>
+    <string name="compartirweb">Tienes dudas sobre nuestra aplicacion? Visita nuesta pagina web.</string>
+    <string name="compartirloc">Tu localizacion actual es:</string>
+    <string name="compartirpre">Para compartir un mensaje con tus amigos, gira el telefono!</string>
 
 </resources>

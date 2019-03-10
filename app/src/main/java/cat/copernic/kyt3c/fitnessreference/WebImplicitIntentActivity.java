@@ -18,7 +18,7 @@ public class WebImplicitIntentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_webitext);
+        setContentView(R.layout.webitext);
         txtweb = findViewById(R.id.txtWeb);
         txtcom = findViewById(R.id.txtCompartir);
     }
