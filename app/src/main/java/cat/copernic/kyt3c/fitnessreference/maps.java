@@ -2,6 +2,7 @@ package cat.copernic.kyt3c.fitnessreference;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -20,6 +21,8 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -148,8 +151,9 @@ public class maps extends FragmentActivity implements OnMapReadyCallback {
                         lat, lng, 1);
                 if (!list.isEmpty()) {
                     Address DirCalle = list.get(0);
-                    //DirCalle.getAddressLine(0) - El textView se llama; textUbi
                     String estoesloquequieroquesalga = DirCalle.getAddressLine(0);
+                    Toast.makeText(getBaseContext(), "Ahora mismo estas en: "+estoesloquequieroquesalga,
+                            Toast.LENGTH_LONG).show();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
