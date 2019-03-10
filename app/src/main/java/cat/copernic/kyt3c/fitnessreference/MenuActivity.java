@@ -19,6 +19,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Objects;
 
 public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -70,8 +73,9 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.ic_ajustes:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new EditarPerfilFragment()).commit();
+                Intent intentEditarPerfil = new Intent(MenuActivity.this, EditarPerfilFragment.class);
+                startActivity(intentEditarPerfil);
+
                 break;
 
             case R.id.ic_geolocalizacion:
@@ -95,8 +99,9 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 dialog.setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        mAuth.getCurrentUser().delete();
-
+                        FirebaseDatabase.getInstance().getReference("Users")
+                                .child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).removeValue();
+                        Objects.requireNonNull(mAuth.getCurrentUser()).delete();
                         MenuActivity.this.finish();
                     }
                 });
