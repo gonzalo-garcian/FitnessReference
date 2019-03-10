@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdapter.ItemClickListener{
 
@@ -37,7 +38,7 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
         adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
-                ((LinearLayoutManager) recyclerView.getLayoutManager()).getOrientation());
+                ((LinearLayoutManager) Objects.requireNonNull(recyclerView.getLayoutManager())).getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
 
         return vista;

@@ -1,10 +1,13 @@
 package cat.copernic.kyt3c.fitnessreference;
 
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -15,29 +18,30 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Objects;
 
-public class EditarPerfilFragment extends AppCompatActivity implements View.OnClickListener {
+public class EditarPerfilFragment extends Fragment implements View.OnClickListener {
 
     private EditText editTextName, editTextEmail, editTextPassword, editTextPhone;
 
     private FirebaseAuth mAuth;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editar_perfil_fragment);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        editTextName = findViewById(R.id.update_text_name);
-        editTextEmail = findViewById(R.id.update_text_email);
-        editTextPassword = findViewById(R.id.update_text_password);
-        editTextPhone = findViewById(R.id.update_text_phone);
+        View vista = inflater.inflate(R.layout.activity_editar_perfil_fragment,container,false);
+
+        editTextName = vista.findViewById(R.id.update_text_name);
+        editTextEmail = vista.findViewById(R.id.update_text_email);
+        editTextPassword = vista.findViewById(R.id.update_text_password);
+        editTextPhone = vista.findViewById(R.id.update_text_phone);
 
         mAuth = FirebaseAuth.getInstance();
 
-        findViewById(R.id.button_update).setOnClickListener(this);
+        vista.findViewById(R.id.button_update).setOnClickListener(this);
+
+        return vista;
     }
 
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
     }
 
@@ -104,8 +108,7 @@ public class EditarPerfilFragment extends AppCompatActivity implements View.OnCl
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(EditarPerfilFragment.this, "Update Completado", Toast.LENGTH_LONG).show();
-                    EditarPerfilFragment.this.finish();
+                    Toast.makeText(getContext(), "Update Completado", Toast.LENGTH_LONG).show();
                 }
             }
         });
