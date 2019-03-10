@@ -8,6 +8,7 @@ import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ import java.util.Objects;
 public class EditarPerfilFragment extends Fragment implements View.OnClickListener {
 
     private EditText editTextName, editTextEmail, editTextPassword, editTextPhone;
+    private Button button_update;
 
     private FirebaseAuth mAuth;
 
@@ -32,6 +34,7 @@ public class EditarPerfilFragment extends Fragment implements View.OnClickListen
         editTextEmail = vista.findViewById(R.id.update_text_email);
         editTextPassword = vista.findViewById(R.id.update_text_password);
         editTextPhone = vista.findViewById(R.id.update_text_phone);
+        button_update = vista.findViewById(R.id.button_update);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -46,6 +49,9 @@ public class EditarPerfilFragment extends Fragment implements View.OnClickListen
     }
 
     private void registerUser() {
+
+        button_update.setEnabled(false);
+
         final String name = editTextName.getText().toString().trim();
         final String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
@@ -93,8 +99,8 @@ public class EditarPerfilFragment extends Fragment implements View.OnClickListen
             return;
         }
 
+        Objects.requireNonNull(mAuth.getCurrentUser()).updatePassword(password);
         Objects.requireNonNull(mAuth.getCurrentUser()).updateEmail(email);
-        mAuth.getCurrentUser().updatePassword(password);
 
         User user = new User(
                 name,
@@ -109,6 +115,11 @@ public class EditarPerfilFragment extends Fragment implements View.OnClickListen
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(getContext(), "Update Completado", Toast.LENGTH_LONG).show();
+                    button_update.setEnabled(false);
+                    editTextEmail.setText("");
+                    editTextName.setText("");
+                    editTextPassword.setText("");
+                    editTextPhone.setText("");
                 }
             }
         });

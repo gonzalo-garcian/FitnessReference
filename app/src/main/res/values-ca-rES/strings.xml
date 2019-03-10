@@ -43,6 +43,8 @@
     <string name="geolocalizacion">Geolocalització</string>
     <string name="editarPerfil">Editar Perfil</string>
     <string name="reiniciar_progreso">Borrar Usuari</string>
+    <string name="negativeButton">Ho he de pensar millor</string>
+    <string name="positiveButton">Eliminar</string>
     <!--- FIN MENU -->
 
     <!--- ACTIVIDADES -->
@@ -73,6 +75,8 @@
     <!--- estiramientos -->
     <string name="antes">Abans</string>
     <string name="despues">Després</string>
+    <string name="title_delete_acc">Estàs segur?</string>
+    <string name="description_delete_acc">Aquesta acció eliminará el teu compte de forma permanent</string>
 
     <!--- FIN ACTIVIDADES -->
 
