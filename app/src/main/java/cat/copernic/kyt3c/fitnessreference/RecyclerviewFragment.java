@@ -47,7 +47,7 @@ public class RecyclerviewFragment extends Fragment implements MyRecyclerViewAdap
 
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(getContext(), "Este ejericio es del DIA #" + position + " quieres compartirlo? Entra en el tab compartir.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Este ejericio es del DIA #" + (position+1) + " quieres compartirlo? Entra en el tab compartir.", Toast.LENGTH_SHORT).show();
         actividades.set(position, getString(R.string.exercici));
         Intent intent = new Intent(getActivity(), DiaActivity.class);
         startActivity(intent);

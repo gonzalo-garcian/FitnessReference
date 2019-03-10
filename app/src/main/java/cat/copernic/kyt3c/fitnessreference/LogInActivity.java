@@ -67,7 +67,7 @@ public class LogInActivity extends BaseActivity implements
     }
 
     private void showChangeLanguageDialog() {
-        final String[] listIdiomas = {"Español", "Català", "English"};
+        final String[] listIdiomas = {"Español", "Català"};
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(LogInActivity.this);
         mBuilder.setTitle("Seleccione Idioma: ");
         mBuilder.setSingleChoiceItems(listIdiomas, -1, new DialogInterface.OnClickListener() {
