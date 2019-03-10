@@ -7,7 +7,7 @@
     tools:context=".EditarPerfilFragment">
 
     <EditText
-        android:id="@+id/edit_text_name"
+        android:id="@+id/update_text_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="98dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edit_text_email"
+        android:id="@+id/update_text_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="98dp"
@@ -32,10 +32,10 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_name" />
+        app:layout_constraintTop_toBottomOf="@+id/update_text_name" />
 
     <EditText
-        android:id="@+id/edit_text_password"
+        android:id="@+id/update_text_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="98dp"
@@ -46,10 +46,10 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_email" />
+        app:layout_constraintTop_toBottomOf="@+id/update_text_email" />
 
     <EditText
-        android:id="@+id/edit_text_phone"
+        android:id="@+id/update_text_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="98dp"
@@ -60,10 +60,10 @@
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_password" />
+        app:layout_constraintTop_toBottomOf="@+id/update_text_password" />
 
     <Button
-        android:id="@+id/button_register"
+        android:id="@+id/button_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
@@ -72,10 +72,10 @@
         android:text="SIGNUP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_phone" />
+        app:layout_constraintTop_toBottomOf="@+id/update_text_phone" />
 
     <TextView
-        android:id="@+id/textRegistro"
+        android:id="@+id/textUpdate"
         android:layout_width="131dp"
         android:layout_height="42dp"
         android:layout_marginStart="140dp"
