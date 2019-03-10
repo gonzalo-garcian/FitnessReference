@@ -93,9 +93,9 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.ic_reiniciar_progreso:
                 AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-                dialog.setTitle("Estás seguro?");
-                dialog.setMessage("Esta acción eliminará por completo tu cuenta.");
-                dialog.setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
+                dialog.setTitle(getString(R.string.title_delete_acc));
+                dialog.setMessage(getString(R.string.description_delete_acc));
+                dialog.setPositiveButton(getString(R.string.positiveButton), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         FirebaseDatabase.getInstance().getReference("Users")
@@ -105,7 +105,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                     }
                 });
 
-                dialog.setNegativeButton("Me lo he pensado mejor", new DialogInterface.OnClickListener() {
+                dialog.setNegativeButton(getString(R.string.negativeButton), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int which) {
                         dialogInterface.dismiss();

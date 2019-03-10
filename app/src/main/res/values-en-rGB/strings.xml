@@ -73,6 +73,10 @@
     <!--- estiramientos -->
     <string name="antes">Bejore</string>
     <string name="despues">After</string>
+    <string name="negativeButton">Don\'t think so</string>
+    <string name="positiveButton">Delete</string>
+    <string name="title_delete_acc">Are you sure?</string>
+    <string name="description_delete_acc">This action will permanently delete your account</string>
 
     <!--- FIN ACTIVIDADES -->
 

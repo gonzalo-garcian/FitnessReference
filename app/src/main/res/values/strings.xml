@@ -43,6 +43,10 @@
     <string name="geolocalizacion">Geolocalización</string>
     <string name="editarPerfil">Editar Perfil</string>
     <string name="reiniciar_progreso">Borrar Usuario</string>
+    <string name="negativeButton">Me lo he pensado mejor</string>
+    <string name="positiveButton">Eliminar</string>
+    <string name="title_delete_acc">Estás seguro?</string>
+    <string name="description_delete_acc">Esta acción eliminará por completo tu cuenta.</string>
     <!--- FIN MENU -->
 
     <!--- ACTIVIDADES -->
