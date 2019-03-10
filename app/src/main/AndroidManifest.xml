@@ -22,7 +22,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".EditarPerfilFragment"></activity>
+        <activity android:name=".SignUpActivity" />
         <activity
             android:name=".DiaActivity"
             android:label="@string/title_activity_dia"
