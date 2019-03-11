@@ -51,6 +51,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="scalingPercent" value="71" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -62,7 +63,7 @@
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="d8dad9" />
-                                      <entry key="foregroundImage" value="C:\Users\Raul Barrero\StudioProjects\FitnessReference\app\src\main\res\drawable\muscle_logo.png" />
+                                      <entry key="foregroundImage" value="C:\Users\Kevin\Documents\Android\FitnessReference\app\src\main\res\drawable\muscle_logo.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
