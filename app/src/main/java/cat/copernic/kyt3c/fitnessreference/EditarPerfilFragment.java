@@ -36,8 +36,12 @@ public class EditarPerfilFragment extends Fragment implements View.OnClickListen
         editTextPhone = vista.findViewById(R.id.update_text_phone);
         button_update = vista.findViewById(R.id.button_update);
 
+
         mAuth = FirebaseAuth.getInstance();
 
+        editTextName.setText(mAuth.getCurrentUser().getDisplayName());
+        editTextEmail.setText(mAuth.getCurrentUser().getEmail());
+        editTextPhone.setText(mAuth.getCurrentUser().getPhoneNumber());
         vista.findViewById(R.id.button_update).setOnClickListener(this);
 
         return vista;
